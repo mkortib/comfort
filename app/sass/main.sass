@@ -1,0 +1,3883 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+// ::placeholder
+// 	color: #666
+
+/*********************** CUSTOM FONTS *****************************/
+
+@font-face 
+	font-family: 'Montserrat'
+	src: url('../fonts/Montserrat-Regular.eot')
+	src: local('../fonts/Montserrat Regular'), local('../fonts/Montserrat-Regular'),
+	url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+	url('../fonts/fonts/Montserrat-Regular.woff') format('woff'),
+	url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+	url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Montserrat'
+	src: url('../fonts/Montserrat-Medium.eot')
+	src: local('../fonts/Montserrat Medium'), local('../fonts/Montserrat-Medium'),
+	url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+	url('../fonts/Montserrat-Medium.woff') format('woff'),
+	url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+	url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg')
+	font-weight: 500
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Montserrat'
+	src: url('../fonts/Montserrat-SemiBold.eot')
+	src: local('../fonts/Montserrat SemiBold'), local('../fonts/Montserrat-SemiBold'),
+	url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+	url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+	url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+	url('../fonts/Montserrat-SemiBold.svg#Montserrat-SemiBold') format('svg')
+	font-weight: 600
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Montserrat'
+	src: url('../fonts/Montserrat-Bold.eot')
+	src: local('../fonts/Montserrat Bold'), local('../fonts/Montserrat-Bold'),
+	url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+	url('../fonts/Montserrat-Bold.woff') format('woff'),
+	url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+	url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg')
+	font-weight: bold
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Intro Bold Alt'
+	src: url('../fonts/Intro-Bold-Alt.eot')
+	src: local('../fonts/Intro Bold Alt'), local('../fonts/Intro-Bold-Alt'),
+	url('../fonts/Intro-Bold-Alt.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Intro-Bold-Alt.woff2') format('woff2'),
+	url('../fonts/Intro-Bold-Alt.woff') format('woff'),
+	url('../fonts/Intro-Bold-Alt.ttf') format('truetype'),
+	url('../fonts/Intro-Bold-Alt.svg#Intro-Bold-Alt') format('svg')
+	font-weight: bold
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Intro'
+	src: url('../fonts/Intro-Regular.eot')
+	src: local('../fonts/Intro Regular'), local('../fonts/Intro-Regular'),
+	url('../fonts/Intro-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Intro-Regular.woff') format('woff'),
+	url('../fonts/Intro-Regular.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+@font-face 
+	font-family: 'Intro Bold'
+	src: url('../fonts/Intro-Bold.eot')
+	src: local('../fonts/Intro Bold'), local('../fonts/Intro-Bold'),
+	url('../fonts/Intro-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Intro-Bold.woff') format('woff'),
+	url('../fonts/Intro-Bold.ttf') format('truetype')
+	font-weight: bold
+	font-style: normal
+
+
+@font-face 
+	font-family: 'Intro Regular Alt'
+	src: url('../fonts/Intro-Regular-Alt.eot')
+	src: local('../fonts/Intro Regular Alt'), local('../fonts/Intro-Regular-Alt'),
+	url('../fonts/Intro-Regular-Alt.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Intro-Regular-Alt.woff2') format('woff2'),
+	url('../fonts/Intro-Regular-Alt.woff') format('woff'),
+	url('../fonts/Intro-Regular-Alt.ttf') format('truetype'),
+	url('../fonts/Intro-Regular-Alt.svg#Intro-Regular-Alt') format('svg')
+	font-weight: normal
+	font-style: normal
+
+
+/*****************MIXINS**************/
+
+@mixin transition($property, $time, $delay: 0s) 
+	transition: $property $time $delay
+
+
+@mixin montReg() 
+	font-family: 'Montserrat', sans-serif
+	font-weight: normal
+	font-style: normal
+
+@mixin introReg() 
+	font-family: 'Intro', sans-serif
+	font-weight: normal
+	font-style: normal
+
+
+@mixin montMd() 
+	font-family: 'Montserrat', sans-serif
+	font-weight: 500
+	font-style: normal
+
+
+@mixin montSemBold() 
+	font-family: 'Montserrat', sans-serif
+	font-weight: 600
+	font-style: normal
+
+
+@mixin montBold() 
+	font-family: 'Montserrat', sans-serif
+	font-weight: bold
+	font-style: normal
+
+
+@mixin introRegAlt() 
+	font-family: 'Intro Regular Alt', sans-serif;
+	font-weight: normal
+	font-style: normal
+
+
+@mixin introBoldAlt() 
+	font-family: 'Intro Bold Alt', sans-serif
+	font-weight: normal
+	font-style: normal
+
+
+@mixin introBold() 
+	font-family: 'Intro Bold', sans-serif
+	font-weight: bold
+	font-style: normal
+
+
+@mixin grad-bg() 
+	background: linear-gradient(to right, rgb(255,134,50), rgb(218,72,22))
+
+@mixin notgrad-bg() 
+	background: linear-gradient(to right, rgb(218,72,22), rgb(218,72,22))
+
+@mixin shadow
+	box-shadow: 0 0px 51px 10px rgba(0,0,0,0.1)
+
+@mixin orangeShad
+	box-shadow: 0px 8px 50px 9px rgba($lightOrange, .3)
+
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+
+/************ CUSTOM STYLES ********************/
+
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+
+a 
+	text-decoration: none
+
+
+button 
+	outline: none
+	cursor: pointer
+	border: none
+
+
+ul
+	list-style-type: none
+
+::selection
+	background-color: $accent
+	color: #fff
+
+
+body, html
+	@include montMd()
+	font-size: 100%
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	min-height: 100vh
+
+body
+	background-color: #161936
+	color: $black
+
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	text-transform: uppercase
+	line-height: 1.4
+
+.text-center
+	text-align: center
+
+.grad_class
+	opacity: 0
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -1
+	top: 0
+	left: 0
+	@include grad-bg()
+	border-radius: 50%
+	transition: opacity .5s ease
+
+.grad_trans
+	opacity: 0
+	position: absolute
+	width: 100%
+	height: 100%
+	z-index: -1
+	top: 0
+	left: 0
+	@include grad-bg()
+	transition: opacity .5s ease
+
+.button
+	@include montBold()
+	display: inline-block
+	border: none
+	color: $lightOrange
+	text-decoration: none
+	background-color: #fff
+	padding: 13px 18px
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 1px
+	border-radius: 2px
+	text-align: center
+	position: relative
+	font-weight: bold
+	width: 100%
+	max-width: 131px
+	outline: none
+	border-radius: 21.5px
+	transition: background-color .1s ease
+	cursor: pointer
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: $orange
+	&:active
+		background-color: $orange
+
+.orange_button
+	color: #fff
+	font-size: 12px
+	padding: 20px 20px
+	border-radius: 50px
+	@include grad-bg()
+	display: inline-block
+	text-transform: uppercase
+	@include montBold()
+	text-align: center
+	position: relative
+	transition: all .3s ease
+	outline: none
+	width: 100%
+	max-width: 290px
+	box-shadow: 0px 8px 50px 9px rgba($lightOrange, .3)
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+		background: $orange
+	&:hover
+		background: $orange
+	&:active
+		background: $orange
+
+.white_button
+	color: $orange
+	font-size: 12px
+	padding: 20px 40px
+	border-radius: 50px
+	background-color: #fff
+	display: inline-block
+	text-transform: uppercase
+	@include montBold()
+	text-align: center
+	position: relative
+	transition: all .3s ease
+	outline: none
+	width: 100%
+	max-width: 290px
+	box-shadow: 0px 8px 50px 9px rgba($lightOrange, .3)
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+		background: $orange
+	&:hover
+		background: $orange
+	&:active
+		background: $orange
+
+
+/*************** MAIN PAGE **********************************************/
+
+/* HEADER */
+.ishome, .isnohome
+	color: #fff
+	.header
+		max-width: 1440px
+		position: absolute
+		top: 23px
+		left: 50%
+		transform: translate(-50%)
+		width: 100%
+		padding: 0 15px
+		color: #fff
+		z-index: 5
+.header_nav
+	.nav_cnt
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0
+		position: relative
+		top: 10px
+	li
+		@include montReg()
+		font-size: 14px
+		&:not(:last-child)
+			margin-right: 20px
+		a
+			color: #fff
+	.mnu_toggle
+		outline: none
+		display: flex
+		background-color: transparent
+		.menu_point
+			margin-right: 8px
+			// padding: 3px
+			width: 5px
+			height: 5px
+			background-color: #fff
+			border-radius: 50%
+			display: inline-block
+			vertical-align: middle
+
+
+.phone_warp
+	position: relative
+	top: 10px
+	display: flex
+	.phone
+		@include montBold()
+		font-size: 16px
+	.phone_icon
+		top: -10px
+		margin-left: 40px
+		padding: 10px
+		border-radius: 50%
+		background-color: $blue
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 53px 
+			height: 53px
+			border: 1px solid #fff
+			border-radius: 50%
+			left: -6px
+			top: 0
+		img
+			position: relative
+			left: -5px
+			width: 33px
+			height: 33px
+
+.decorative
+	position: absolute
+	z-index: -2
+	right: 0
+	top: -46px
+	width: 540px	
+
+
+/****** MAIN ******/
+
+.main_sales
+	padding: 0 15px
+	width: 100%
+	max-width: 1440px
+	position: absolute
+	top: 115px
+	left: 50%
+	transform: translateX(-50%)
+	z-index: 5
+	text-align: right
+	.sales_content
+		padding: 0 15px
+		margin-right: 20px
+		h3
+			text-transform: uppercase
+			@include montBold()
+			font-size: 24px
+			img
+				width: 30px
+				display: inline-block
+				margin-right: 12px
+				position: relative
+				top: -5px
+		p
+			@include montReg()
+			font-size: 16px
+			margin: 20px 0
+		.for_but
+			width: 100%
+			text-align: center
+		.button
+			@include montBold()
+			margin-top: 20px
+			transition: all .5s ease
+
+/* SLIDER */ 
+
+.main-slider 
+	height: 100vh
+	z-index: 4
+
+	.slick 
+		&-track, &-list 
+			height: inherit
+		&-initialized .slick-slide 
+			display: flex
+			justify-content: center
+			align-items: center
+		&-slide 
+			background-position: center
+			&:first-of-type 
+				background-image: url('../img/1.png')
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+			&:nth-of-type(2) 
+				background-image: url('../img/2.png')
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+			&:nth-of-type(3) 
+				background-image: url('../img/4.png')
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+			&:nth-of-type(4) 
+				background-image: url('../img/5.png')
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+
+		&-next 
+			position: absolute
+			z-index: 1
+			top: 70%
+			left: 52%
+			@include grad-bg()
+			height: 75px
+			width: 75px
+			border-radius: 50%
+
+			&::before 
+				content: ''
+				position: absolute
+				background: url('../img/svg/slider-btn-ico.svg') center no-repeat
+				width: 22px
+				height: 14px
+				top: calc(50% - 7px)
+				left: calc(50% - 11px)
+				z-index: 1
+
+		&-dots 
+			position: absolute
+			bottom: 30px
+			right: 10%
+			list-style: none
+			z-index: 20
+			transform: translateX(20%)
+			width: 100%
+			max-width: 250px
+			display: inline-block
+
+			li 
+				display: inline-block
+				vertical-align: bottom
+				margin: 0 20px
+
+			button 
+				position: relative
+				@include montMd()
+				font-size: 16px
+				background: none
+				color: $white
+				transition: all .5s ease
+
+				&::after 
+					content: ''
+					display: none
+					@include grad-bg()
+					height: 5px
+					width: 5px
+					border-radius: 50%
+					opacity: 0
+					position: relative
+					left: 4px
+					top: 8px
+
+			.slick-active 
+				button 
+					top: -10px
+					transform: scale(1.2)
+					@include montBold()
+					// font-size: 24px
+
+					&::after 
+						opacity: 1
+						display: block
+						margin: 7px auto 0
+	.slide 
+
+		&-all
+			position: relative
+			top: 30%
+			// margin-top: 200px
+			margin-left: 45px
+
+		&-cnt 
+			max-width: 1440px
+			width: 100%
+			// padding-left: 65px
+			color: $white
+
+		&-title, &-txt 
+			@include montBold()
+    
+		&-title 
+			font-size: 24px
+			letter-spacing: #{(50/1000)}em
+			position: relative
+			display: inline-block
+
+			&::after 
+				content: ''
+				position: absolute
+				z-index: -1
+				left: 0
+				bottom: -6px
+				height: 13px
+				width: 100%
+				background: url(../img/svg/wave-line.svg) 0 no-repeat
+				background-size: cover
+
+		&-txt 
+
+			font-size: 36px
+			line-height: 1.8
+			max-width: 820px
+			margin-top: 40px
+    
+.slick-dotted.slick-slider
+	margin-bottom: 0  
+
+.slider-content
+	max-width: 1440px
+	width: 100%
+	// left: 50%
+	// transform: translateX(-50%)
+
+.circle, .dec_fig, .dec_fig2
+	position: absolute
+	z-index: 5
+
+.circle
+	width: 25px
+	height: 25px
+	border: 3px solid $orange
+	border-radius: 50%
+	top: 67%
+	left: 59%
+
+.dec_fig
+	top: 51.5%
+	left: 66% 
+	img
+		width: 30px
+		height: 20px
+
+.dec_fig2
+	img
+		width: 35px
+		height: 30px
+	left: 60%
+	top: 56%	
+
+
+/* FOOTER */
+
+.main_foot
+	position: absolute
+	max-width: 500px
+	width: 100%
+	bottom: 30px
+	z-index: 4
+	left: 20%
+	transform: translateX(-50%)
+.sicial_wrap
+	display: flex
+	align-items: center
+	p
+		position: relative
+		@include montMd()
+		font-size: 14px
+		padding-left: 50px
+		margin: 0
+		&::after
+			content: ''
+			width: 25px
+			position: absolute
+			height: 3px
+			left: 0
+			background-color: $orange
+			bottom: 9px
+	a
+		display: inline-block
+		margin-right: 20px
+	img
+		display: inline-block
+		width: 15px
+		height: 15px
+
+
+/****************************  ABOUT PROJECT PAGE  ****************************************/ 
+
+.circles_wrap
+	width: 140px
+	height: 70px
+	position: absolute
+	.wrap_for_circles
+		width: 100%
+		height: 100%	
+		position: relative
+		.circle_around
+			position: absolute
+			width: 33px
+			height: 33px
+			border-radius: 50%
+			border: 4px solid $lightOrange
+			&:nth-child(1)
+				right: 0
+				top: 0
+			&:nth-child(2)
+				border: 4.5px solid $lightOrange
+				width: 23px
+				height: 23px
+				bottom: 0
+				left: 50px
+			&:nth-child(3)
+				width: 10px
+				height: 10px
+				background-color: $lightOrange
+				left: 0
+				top: 20px
+
+.about_prog
+	overflow: hidden
+
+section
+	overflow: hidden
+	color: #000
+
+.s_white
+	background-color: #fff
+
+.s_grey
+	background-color: #f1f2f9
+
+.s_blue
+	background-color: $blue
+
+.s_prog_title
+	overflow: hidden
+	min-height: 900px
+	width: 100%
+	position: relative
+	top: 95px
+	z-index: 5
+	// padding-bottom: 100px
+
+.blue_sect_dec
+	overflow: hidden
+	position: absolute
+	bottom: -1px
+	height: 124px
+	width: 100%
+	max-width: 2560px
+	background-size: cover
+	background-repeat: no-repeat
+	background-image: url(../img/sect_dec.png)
+
+.prog_title
+	max-width: 1440px
+	left: 50%
+	transform: translateX(-50%)
+	position: absolute
+	width: 100%
+	top: 160px
+	padding: 0 100px
+	.title_wrap
+		h2
+			font-size: 36px
+			@include introBoldAlt()
+			margin-bottom: 60px
+			line-height: 1.5
+		p
+			color: #787878
+			@include montMd()
+			font-size: 14px
+			line-height: 2
+			margin-bottom: 50px	
+	.img_wrap
+		max-width: 430px
+		height: 290px
+		width: 100%
+		border: 10px solid #fff
+		background-image: url(../img/about_project/frame_title.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		box-shadow: 0 0px 51px 10px rgba(0,0,0,0.1)
+		margin: 80px auto 0
+	.img_wrap_all
+		position: relative
+		img
+			position: absolute
+			z-index: -1
+		.rectang
+			top: -100px
+			right: -100px
+		.triangle
+			bottom: -80px
+			left: -20px
+		.circle_alone
+			position: absolute
+			border: 4.5px solid $lightOrange
+			width: 23px
+			height: 23px
+			bottom: 0
+			right: 0
+			border-radius: 50%
+		.circles_wrap
+			width: 140px
+			height: 70px
+			position: absolute
+			top: -60px
+			left: -50px
+			.wrap_for_circles
+				width: 100%
+				height: 100%	
+				position: relative
+				.circle_around
+					position: absolute
+					width: 33px
+					height: 33px
+					border-radius: 50%
+					border: 4px solid $lightOrange
+					&:nth-child(1)
+						right: 0
+						top: 0
+					&:nth-child(2)
+						border: 4.5px solid $lightOrange
+						width: 23px
+						height: 23px
+						bottom: 0
+						left: 50px
+					&:nth-child(3)
+						width: 10px
+						height: 10px
+						background-color: $lightOrange
+						left: 0
+						top: 20px
+ 
+
+.s_prog_about
+	min-height: 1350px
+	position: relative
+	color: #fff
+	top: 100px
+	.prog_title
+		@include introBoldAlt()
+		font-size: 30px
+		text-align: center	
+		position: relative	
+		top: 0px
+	.blue_sect_dec
+		overflow: hidden
+		position: absolute
+		bottom: 100px
+		height: 228px
+		width: 100%
+		background-size: cover
+		max-width: 2560px
+		background-repeat: no-repeat
+		background-image: url(../img/about_project/decir_sect2.png)
+		background-color: #f8f8f8
+		padding-bottom: 200px
+	.slider_detals
+		max-width: 1440px
+		width: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		top: 150px
+
+	.slick-slide 
+		img
+			width: 100%
+		
+.img_container
+	p
+		@include introBoldAlt()
+		font-size: 24px
+		margin-top: 10px
+		line-height: 1.2
+		margin-left: 20px
+
+.img_all
+	text-align: center
+	.img_container
+		display: inline-block
+
+
+.slide_big
+	// display: none
+	.middle
+		position: absolute
+		top: 0px
+	.img_container
+		img
+			max-width: 450px
+			width: 100%
+			height: 280px
+	.row1
+		margin-bottom: 100px	
+
+
+.owl-nav
+	display: none
+
+.owl_nav
+	position: absolute
+	max-width: 1440px
+	width: 100%
+	left: 50%
+	top: 160px
+	transform: translateX(-50%)
+	.slide_prev, .slide_next
+		cursor: pointer
+		position: absolute
+		top: 0
+		width: 45px
+		height: 45px
+		border: 2px solid $lightOrange
+		border-radius: 50%
+		img
+			position: relative
+			top: 5px
+			left: 13px
+	.slide_prev
+		top: -90px
+		left: 20px
+	.slide_next
+		top: -90px
+		right: 20px
+
+.slide_medium
+	display: none
+	.img_center
+		display: inline-block
+	.img_container
+		text-align: center
+		img
+			display: inline-block
+			max-width: 450px
+			width: 100%
+			height: 280px
+
+.circles
+	&_all
+		width: 100%
+		position: absolute
+		top: 224px
+		background-color: #f1f2f9
+		height: 100px
+	&_descr_wrap
+		z-index: 20
+		max-width: 1440px
+		width: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 20px
+	&_descr
+		// margin: 0 90px
+		.item
+			flex-direction: column
+			display: flex
+			padding: 0 20px
+			justify-content: center
+			align-items: center
+			.itm_circle
+				@include introBoldAlt()
+				font-size: 13px
+				width: 150px
+				height: 150px
+				position: relative
+				background: #fff
+				color: #000
+				border-radius: 50%
+				box-shadow: 0 10px 80px 3px rgba(120,120,120,.3)
+				transition: all .5s ease
+				cursor: pointer
+				z-index: 1
+				&:hover
+					.grad_class
+						opacity: 1
+					box-shadow: 0 10px 80px 3px rgba($lightOrange, .3)
+					color: #fff
+					.plan
+						color: #fff
+						p
+							color: #fff
+					span
+						color: #FFF
+				.plan
+					color: $blue
+					position: absolute
+					width: 115px
+					height: 60px
+					top: 30px
+					left: 40px
+					p
+						@include introBoldAlt()
+						margin: 0 
+						margin-left: 15px
+						color: $blue
+						font-size: 26px
+					span
+						top: 10px
+						font-size: 13px
+					.ot
+						left: 0px
+						top: 25px
+					.do
+						left: 0
+						top: 67px
+				span
+					font-size: 48px
+					@include introBoldAlt()
+					color: $blue
+					top: 50%
+					left: 48%
+					position: absolute
+					transform: translate(-50%, -50%)
+			p
+				font-size: 16px
+				@include montMd()
+				margin-top: 50px
+				margin-bottom: 0
+				color: #787878
+
+.decor_circles_wrap
+	height: 76px
+	width: 73px
+	position: absolute
+	z-index: 10
+	bottom: 284px
+	right: 130px
+	.decor_circles
+		width: 100%
+		height: 100%
+		position: relative
+		.circle
+			position: absolute
+			border: 4px solid $orange
+			width: 20px
+			height: 20px
+			&:nth-child(1)
+				right: 0
+				top: 10px
+			&:nth-child(2)
+				width: 10px
+				height: 10px
+				left: 20px
+				top: 60px
+
+
+
+.s_accomplishment
+	min-height: 1300px
+	z-index: 20
+	position: relative
+	padding-top: 430px
+	// padding-bottom: 498px
+	top: 100px
+	.accomplishment_title
+		position: relative
+		z-index: 3
+		text-align: center
+		@include introBoldAlt()
+		font-size: 30px
+	.decor_circles_wrap
+		top: -10px
+		z-index: 50
+
+.slider_wrap
+	max-width: 1440px
+	width: 100%
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	top: 590px
+	.owl_nav
+		width: 250px
+		height: 100px
+		position: relative
+		top: 100px
+		.slide_prev, .slide_next
+			position: absolute
+			top: 0
+			width: 45px
+			height: 45px
+			border: 2px solid $lightOrange
+			border-radius: 50%
+			img
+				position: relative
+				top: 5px
+				left: 13px
+		.slide_prev
+			top: 0px
+			left: 20px
+		.slide_next
+			top: 0px
+			right: 20px
+		p
+			display: inline-block
+			position: absolute
+			top: 10px
+			left: 110px
+			margin: 0
+			font-size: 16px
+			@include introBoldAlt()
+	.dec_triangl, .dec_rectangl
+		position: absolute
+		top: 0
+		z-index: -1 
+	.dec_triangl
+		right: -30px
+		top: -70px
+	.dec_rectangl
+		left: -200px
+		top: -110px
+	.circles_wrap
+		transform: scale(-1, 1) rotate(-20deg)
+		bottom: 50px
+		left: -100px
+
+
+
+.slider_accomp
+	width: 100%
+	display: flex
+	// justify-content: space-between
+	// align-items: center
+	.slide
+		// margin-right: 20px
+		background-color: #fff
+		border-radius: 10px
+		display: inline-block
+		text-align: center
+		// &:not(:last-child)
+		margin: 0 15px
+		&_img
+			border-radius: 10px 10px 0px 0px
+			width: 100%
+			min-height: 330px
+			background-size: cover
+			background-position: center
+			background-repeat: no-repeat
+		p
+			margin: 40px 0
+			@include montMd()
+			font-size: 16px
+
+
+
+		
+.s_getflat
+	// z-index: 20
+	// overflow: hidden
+	min-height: 1200px
+	color: $blue
+	position: relative
+	padding-top: 160px
+	top: 100px
+	.getflat_title
+		font-size: 30px
+		@include introBoldAlt()
+		text-align: center
+
+.flat_examples_wrap
+	z-index: 2
+	max-width: 1440px
+	width: 100%
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	top: 300px
+	.flat_simple, .flat_all
+		border-radius: 15px
+		text-align: center
+		padding: 50px 80px
+		h3
+			@include introBoldAlt()
+			font-size: 24px
+			margin-bottom: 40px
+		img
+			display: inline-block
+			max-width: 390px
+			width: 100%
+			height: 245px
+			border-radius: 10px
+		p
+			font-size: 16px
+			@include montMd()
+			padding: 0
+	.flat_simple
+		background-color: #fff
+		box-shadow: 0 20px 69px 3px rgba(0,0,0,.1)
+		h3
+			color: #eb6523
+		p
+			color: $silver
+			margin: 60px 0 40px 0
+		img
+			box-shadow: 0 20px 51px 10px rgba(0,0,0,.1)
+	.flat_all
+		box-shadow: 0 20px 69px 3px rgba($lightOrange, .3)
+		@include grad-bg()
+		color: #fff
+		p
+			margin: 70px 0 0 0
+		.flat_all_big
+			line-height: 1
+			@include montBold()
+			font-size: 30px
+			margin: 0 0 50px 0
+
+.flat_examples
+	// overflow: hidden
+	position: relative
+	.circles_wrap
+		position: absolute
+		bottom: 200px
+		right: -30px
+		top: -60px
+
+
+	.decor_circles_wrap
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: scale(-1, 1)
+		
+	.triangle
+		z-index: -4
+		bottom: -50px
+		left: 20px
+		position: absolute
+
+	.rectang
+		z-index: -1
+		position: absolute
+		top: -100px
+		right: -50px
+
+#my-footer
+	overflow: hidden
+
+.pages_foot
+	color: #fff
+	position: relative
+	top: 0px
+	min-height: 400px
+	.foot_all
+		padding-top: 60px
+		position: absolute
+		max-width: 1440px
+		width: 100%
+		left: 50%
+		transform: translateX(-50%)
+	.sicial_wrap
+		a:first-child
+			position: relative
+			padding-left: 60px
+			&::after
+				content: ''
+				width: 25px
+				position: absolute
+				height: 3px
+				left: 0
+				background-color: $orange
+				bottom: 9px
+				z-index: 5
+
+.col_footer
+	display: flex
+	justify-content: flex-end
+
+.footer_nav, .footer_nav_small
+	margin-right: 50px
+	@include montReg()
+	font-size: 14px
+	ul
+		display: flex
+		align-items: center
+		margin: 0
+	li
+		a
+			color: #fff
+		&:not(:last-child)
+			margin-right: 30px
+
+.footer_nav_small
+	margin: 30px 0 0 0
+	ul
+		flex-direction: column
+		li:not(:last-child)
+			margin: 0 0 10px 0
+			font-size: 13px
+
+.scnd_foot_wrap
+	position: absolute
+	bottom: 0
+	width: 100%
+	background-color: darken($blue, 5%)
+	.foot_content
+		padding: 10px 0
+	p
+		font-size: 12px
+		color: rgba(#fff, .4)
+		margin: 0
+	.wsf
+		text-align: right
+
+
+.comunicate
+	display: flex
+	h5
+		@include introBoldAlt()
+		font-size: 24px
+	p
+		@include montMd()
+		font-size: 16px
+	.phones
+		margin-left: 65px
+
+.scnd_row
+	margin-top: 90px
+
+.loc_wrap, .cons_wrap, .sched_wrap
+	position: relative
+	top: 10px
+	display: flex
+	.loc_icon, .cons_icon, .sched_icon
+		top: 0
+		width: 55px
+		height: 55px
+		border-radius: 50%
+		@include grad-bg()
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			width: 55px 
+			height: 55px
+			border: 1px solid #fff
+			border-radius: 50%
+			left: -6px
+			top: 0
+		img
+			position: relative
+			left: 15px
+			top: 13px
+			width: 18px
+			height: 27px
+
+.button_wrap
+	a
+		top: 25px
+
+.gery_sect_decor
+	width: 100%
+	background-image: url(../img/about_project/decir_sect2.png)
+	position: absolute
+	top: 0
+	background-size: contain
+	background-repeat: no-repeat
+	overflow: hidden
+	min-height: 228px
+
+.triger_flats_wrap
+	display: none
+
+
+/***** PLANIROVKI MAIN *******/
+
+.s_planmain
+	position: relative
+	min-height: 1700px
+	width: 100%
+	top: 100px 
+	z-index: 5
+	.rectangle
+		z-index: -1
+		position: absolute
+		bottom: -20px
+		right: 200px
+	.decor_circles_wrap
+		z-index: -1
+		bottom: 230px
+		right: 300px
+		.decor_circles
+			.circle
+				border: 4px solid $lightOrange
+			
+
+
+
+
+.top_bl_wrap
+	max-width: 1440px
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	top: 50px
+	position: absolute
+	color: #fff
+	.top_bl
+		position: relative
+		padding: 40px 110px 0
+		width: 100%
+		border: 10px solid #fff
+		background-image: url(../img/planners/main.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		box-shadow: 0 0px 51px 10px rgba(0,0,0,0.1)
+
+		.triangle_dec
+			position: absolute
+			bottom: -70px
+			left: -70px
+			z-index: -1
+
+		.decor_circles_wrap
+			z-index: 10
+			bottom: -1px
+			left: -78px
+			transform: rotate(290deg)
+			.decor_circles
+				.circle
+					border-color: $lightOrange
+					width: 35px
+					height: 35px
+					&:nth-child(1)
+						right: 0
+						top: 10px
+					&:nth-child(2)
+						width: 15px
+						height: 15px
+						left: 20px
+						top: 60px
+
+.call_consult
+	display: flex
+	justify-content: center
+	&:hover
+		.img_consult
+			background-color: $orange
+			&::before
+				background-color: $orange
+
+
+.plan_title
+	margin-top: 145px
+	letter-spacing: 2px
+	text-align: center
+	@include introBoldAlt()
+	font-size: 48px
+	text-transform: uppercase
+
+.after_title
+	font-size: 18px
+	@include montMd()
+	text-align: center
+	margin-top: 40px
+
+.flats_links
+	margin-top: 150px
+	width: 100%
+	display: inline-flex
+
+.flats_row2, .flats_row1
+	display: flex
+	width: 100%
+
+.flat_link
+	position: relative
+	// bottom: -20px
+	padding: 30px 0 50px 20px
+	border-left: 3px solid #fff
+	transition: all .5s ease
+	cursor: pointer
+	width: 100%
+	p
+		margin: 10px 0 0 0
+		@include montMd()
+		font-size: 16px
+		z-index: 2
+		position: relative
+	h5
+		line-height: 1
+		font-size: 24px
+		@include introBoldAlt()
+		position: relative
+		margin: 0
+		z-index: 2
+	&:hover
+		.grad_class
+			opacity: 1
+			border-radius: 0
+			z-index: 1
+		img
+			right: 20px
+			opacity: 1
+			z-index: 6
+
+	img
+		width: 15px
+		transition: all .5s ease
+		position: absolute
+		right: 60px
+		top: 60px
+		opacity: 0
+
+.img_consult
+	background-color: $lightOrange
+	width: 55px
+	height: 55px
+	border-radius: 50%
+	position: relative
+	margin-right: 5px
+	img
+		position: absolute
+		top: 50%	
+		left: 45%
+		transform: translate(-50%, -50%)
+		width: 34px
+		height: 34px
+
+	&::after
+		width: 55px
+		height: 55px
+		content: ''
+		position: absolute
+		border: 1px solid #fff
+		border-radius: 50%
+		right: 5px
+
+	&::before
+		position: absolute
+		content: ''
+		width: 20px
+		height: 5px
+		background-color: $lightOrange
+		bottom: 25px
+		left: 45px
+
+
+.img_descr
+	.orange_button
+		padding: 17px 20px
+
+
+/*** RADIO CUSTOM ****/ 
+		
+.radio * 
+	cursor: pointer
+
+
+.radio input 
+	opacity: 0
+
+
+.radio span 
+	position: relative
+	display: inline-block
+	margin-left: -25px
+	vertical-align: top
+	width: 28px
+	height: 28px
+	border-radius: 2px
+	border: 2px solid $lightOrange
+	//box-shadow: 4px 0px 22px 0px rgba(0, 0, 0, 0.12);
+
+.radio:hover span 
+	border-color: $lightOrange
+
+.radio span:before 
+	content: "" /* comment content to use custom icon classes */
+	position: absolute
+	top: 0
+	left: 0 
+	right: 0 
+	bottom: 0
+	opacity: 0
+	text-align: center
+	font-size: 10px
+	line-height: 10px
+	vertical-align: middle
+	color: #ccc
+
+.radio 
+	span:after 
+		content: ''
+		width: 8px
+		height: 8px
+		background-color: transparent
+		position: absolute
+		right: 3px
+		top: 3px
+		border-radius: 50%
+		z-index: 2
+
+/* override for radio */
+.radio span 
+	border-radius: 50%
+	margin-right: 5px
+
+.radio span:before 
+	z-index: 3
+	content: ""
+	width: 20px
+	height: 20px
+	margin: 2px auto
+	@include grad-bg()
+	border-radius: 100px
+
+.radio input[type=radio]:checked + span 
+	background-color: #fff
+
+.radio input[type=radio]:checked + span:before 
+	color: #fff
+	opacity: 1
+	transition: color .3s ease-out
+
+.radio_wrap
+	display: flex
+
+.radio
+	display: flex
+	.label
+		display: flex
+
+.bottom_form_wrap
+	margin-top: 200px
+
+.select_title
+	color: $black
+	font-size: 30px
+	@include introBoldAlt()
+	text-align: center
+	margin-bottom: 100px
+
+.need1
+	margin-right: 30px
+
+
+.need1, .need2
+	margin-bottom: 0
+	font-size: 18px
+	color: $black
+	@include introReg()
+
+
+.radio_wrap
+	label
+		position: relative
+		top: 2px
+		color: $silver
+		font-size: 14px
+		@include montMd()
+		margin: 0
+	.radio:not(:last-child)
+		margin-right: 30px
+
+.metr_square
+	display: flex
+	input
+		outline: none
+		border-radius: 3px
+		max-width: 85px
+		width: 100%
+		padding: 5px 0
+		font-size: 14px
+		background-color: transparent
+		text-align: center
+		@include montMd()
+		border: 2px solid $lightOrange
+		color: $silver
+		margin-left: 13px
+	label
+		color: $black
+		@include introReg()
+		font-size: 18px
+	.square:first-child
+		margin-right: 20px
+
+.form_container
+	.scnd_row
+		margin-top: 50px
+
+.budget
+	label
+		display: flex
+		color: $black
+		@include introReg()
+		font-size: 18px
+		justify-content: flex-start
+	.f_lab
+		justify-content: flex-end
+		margin-right: 30px
+	input
+		outline: none
+		max-width: 210px
+		width: 100%
+		text-align: center
+		border: 2px solid $lightOrange
+		border-radius: 3px
+		color: $silver
+		font-size: 14px
+		ootline: none
+		margin-left: 13px
+		background-color: transparent
+		padding: 5px 0
+
+.form_select_flat
+	.but_wrap
+		margin-top: 60px
+		text-align: center
+
+.scnd_rad, .frst_rad
+	display: flex
+	margin-right: 24px
+
+
+
+/********* PLANIROKI ALL *************/ 
+
+.s_planning
+	min-height: 300px
+	position: relative
+	top: 100px
+	z-index: 5
+	
+
+.titles_room
+	margin-top: 40px
+	color: $black
+	@include introBoldAlt()
+	font-size: 18px
+	margin-bottom: 10px
+
+.button_all
+	display: flex
+	li
+		max-width: 130px
+		width: 100%
+		margin-right: 25px
+		position: relative
+		&.links_two
+			display: flex
+			max-width: 260px
+			width: 100%
+			position: relative
+			a:first-child
+				margin-right: 25px
+		&:hover
+			.but_white
+				color: $lightOrange
+				border: 2px solid $lightOrange
+	.but_white
+		@include montMd()
+		color: $silver
+		font-size: 14px
+		width: 100%
+		text-decoration: none
+		transition: all .3s ease
+		display: inline-block
+		@include shadow()
+		text-align: center
+		padding: 15px 5px
+		border-radius: 40px
+		border: 1px solid transparent
+
+
+
+.divs
+	display: flex
+
+.selects
+	display: flex
+	justify-content: space-between
+
+.selectize-control
+	width: 150px
+
+.filter_square 
+	max-width: 350px
+	width: 100%
+
+/**** SELCTIZE CUSTOM ****/
+
+.selectize-control.single .selectize-input:after
+	display: none 
+
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input
+	@include montMd()
+	font-size: 14px
+	color: $silver
+	width: 100%
+	text-align: center
+	box-shadow: 0 0 40px 0px rgba(0,0,0,.1)
+	box-shadow: 
+	border: none
+	outline: none
+	padding: 15px 0
+
+/*END*/
+
+.reb_wrap
+	display: flex
+	justify-content: flex-end
+
+.reset
+	margin-right: 30px
+	a
+		letter-spacing: 1px
+		@include montBold()
+		font-size: 12px
+		text-transform: uppercase
+		color: #bfbfc4
+		text-decoration: none
+		span
+			font-weight: 200
+			margin-right: 10px
+			top: 5px
+			width: 20px
+			height: 10px
+			color: #bfbfc4
+			font-size: 30px 
+			position: relative
+
+.wrap_but
+	.orange_button
+		padding: 20px 35px
+
+.butplusreb
+	margin-top: 40px
+
+.grey_decor
+	min-height: 450px
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: -1
+
+.planning_wrap
+	position: relative
+	top: 52px
+
+.item
+	box-shadow: 0 0 69px -10px rgba(0,0,0,.1)
+	border: 5px solid #fff
+	transition: all .5s ease
+	margin-bottom: 30px
+	&:hover
+		border-color: $lightOrange
+		box-shadow: 0 8px 65px -7px rgba(249,123,45,.3)
+
+.s_plans
+	position: relative
+	top: 100px
+	padding-bottom: 300px
+	z-index: 6	
+	.circles_wrap
+		left: 140px
+		top: 0px
+	.decor_circles_wrap, .triang
+		position: absolute
+		bottom: 0
+	.triang
+		left: 180px
+	.decor_circles_wrap
+		z-index: -1
+		left: 160px
+		bottom: 20px
+		transform: scale(1, -1)
+
+.img_wrap
+	background-color: #fff
+	padding: 54px 75px
+	position: relative
+	img
+		width: 100%
+		max-height: 280px
+		// height: 100%
+	span
+		position: absolute
+		@include introBold()
+		font-size: 24px
+		color: $silver
+		top: 10px
+		left: 10px
+
+.plan_descr
+	padding: 25px 0
+	text-align: center
+	.top_descr, .type_flat
+		color: $black
+		@include introBold()
+	.top_descr
+		font-size: 14px
+		margin-bottom: 5px
+	.type_flat
+		font-size: 24px
+
+	.add_info
+		display: flex
+		justify-content: center
+		color: $silver
+		@include montMd()
+		font-size: 14px
+		.all_sq
+			padding-right: 25px
+			position: relative
+			border-right: 2px solid $silver
+		.live_sq
+			margin-left: 25px
+
+	.more
+		padding: 14px 25px
+		display: inline-block
+		color: $silver
+		text-transform: uppercase
+		background-color: #fff
+		border-radius: 30px
+		@include montBold()
+		font-size: 12px
+		margin-top: 10px
+		cursor: pointer
+		position: relative
+		z-index: 2
+		text-decoration: none
+		letter-spacing: 1px
+		.grad_trans
+			border-radius: 30px
+		&:hover
+			.grad_trans
+				opacity: 1
+			color: #fff
+
+.nav_bottom_wrap
+	position: absolute
+	max-width: 1440px
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	bottom: 200px
+
+.nav_bottom
+	display: flex
+	justify-content: center
+	.page
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		position: relative
+		box-shadow: 0 6px 27px 0px rgba(0,0,0,.1)
+		margin-right: 15px
+		font-size: 14px
+		color: $silver
+		@include montBold()
+		cursor: pointer
+		transition: all .5s ease
+		.grad_trans
+			border-radius: 50%
+		.num, .fas
+			display: inline-block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&:hover
+			color: #fff
+			box-shadow: 0 6px 27px 0px rgba($lightOrange, .3)
+			.grad_trans
+				opacity: 1
+
+/******* FLAT PAGE ********/ 
+
+
+.s_flat
+	position: relative
+	top: 100px
+	min-height: 2000px
+	z-index: 5
+	.decor_sect
+		position: absolute
+		top: 0
+		height: 400px
+		width: 100%
+	.flat 
+		margin: 0px 20px
+	.flat_title 
+		.fl_prev
+			left: 87px
+		.fl_next
+			right: 87px 
+
+.flat_title
+	&_wrap
+		position: absolute
+		width: 100%
+		max-width: 1440px
+		left: 50%
+		transform: translateX(-50%)
+		top: 50px
+	position: relative
+	text-align: center
+	h3
+		font-size: 30px
+		@include introBoldAlt()
+	p
+		@include introBold()
+		font-size: 14px 
+		margin: 0
+	.fl_prev, .fl_next
+		position: absolute
+		font-size: 12px
+		top: 30px
+		a
+			color: $lightGrey
+			letter-spacing: 1px
+			@include montBold()
+			position: relative
+			text-decoration: none
+		.img_span
+			position: relative
+			top: -15px
+			&::before
+				content: ''
+				position: absolute
+				width: 43px
+				height: 43px
+				border: 2px solid $lightOrange
+				border-radius: 50%
+				box-shadow: 0 9px 50px 6px rgba(0,0,0,.1)
+			img
+				position: absolute
+				top: 15px
+				left: 15px
+	.fl_prev
+		left: 60px
+		.img_span
+			right: 60px
+		.hide_top_arr
+			position: relative
+			top: 0
+			left: 25px
+	.fl_next
+		right: 60px
+		.img_span
+			left: 20px
+			top: -31px
+		.hide_top_arr
+			position: relative
+			top: 0
+			right: 80px
+
+.flat_wrap
+	position: absolute
+	max-width: 1440px
+	width: 100%
+	left: 50%
+	transform: translateX(-50%)
+	top: 200px
+	.decor_circles_wrap
+		z-index: -1
+		bottom: -50px
+		transform: scale(-1, 1)
+		left: -79px
+
+.flat
+	background-color: #fff
+	padding: 80px 100px
+	position: relative
+	@include shadow()
+	.flat_img
+		position: relative
+		img
+			width: 100%
+
+.flat_descr
+	margin-right: 50px
+
+.flat_items
+	display: flex
+	flex-direction: column
+
+	.l_bl, .r_bl
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+	.item_fl
+		box-shadow: none
+		display: flex
+		margin-bottom: 35px
+	
+	.circle_fl
+		width: 80px
+		height: 80px
+		position: relative
+		box-shadow: 0 10px 41px 2px rgba(0,0,0,.1)
+		@include introBoldAlt()
+		font-size: 16px
+		color: $black
+		border-radius: 50%
+		span
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 55px
+			transform: translate(-50%, -50%)
+
+	p
+		@include montMd()
+		font-size: 16px
+		color: $silver
+		margin-left: 20px
+		position: relative
+		top: 20px
+
+.square_flat	
+	display: flex
+	justify-content: space-between
+	@include introBoldAlt()
+	margin-top: 50px
+	font-size: 16px
+	color: $black
+	span
+		font-size: 24px
+		color: $lightOrange
+
+.mail_consult
+	margin-top: 80px
+	display: flex
+	justify-content: center
+	&:hover
+		.img_consult
+			background-color: $orange
+			&::before
+				background-color: $orange
+
+	.img_consult
+		background-color: $lightOrange
+		width: 55px
+		height: 55px
+		border-radius: 50%
+		position: relative
+		margin-right: 5px
+		img
+			position: absolute
+			top: 50%	
+			left: 45%
+			transform: translate(-50%, -50%)
+			width: 25px
+			height: 20px
+
+		&::after
+			width: 55px
+			height: 55px
+			content: ''
+			position: absolute
+			border: 1px solid $blue
+			border-radius: 50%
+			right: 5px
+
+		&::before
+			position: absolute
+			content: ''
+			width: 20px
+			height: 5px
+			background-color: $lightOrange
+			bottom: 25px
+			left: 45px
+	.img_descr
+		.orange_button
+			padding: 17px 30px
+
+.slider_flat_wrap
+	max-width: 1440px
+	width: 100%
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	top: 1000px
+	.slider_title
+		@include introBoldAlt()
+		font-size: 30px
+		margin-left: 20px
+	.triang
+		position: absolute
+		bottom: -38px
+		right: -107px
+		z-index: -1
+	.circles_wrap 
+		position: absolute
+		z-index: -1
+		transform: scale(-1)
+		right: -114px
+		bottom: -58px
+	.owl_nav
+		top: 100px
+		.slide_prev
+			right: 0
+			left: 90%
+		.slide_next, .slide_prev 
+			img
+				top: -7px
+
+.slider_flats
+	padding-top: 50px
+	margin: 0 20px
+	.item
+		// margin-right: 50px
+	.slick-slide 
+		margin: 20px 15px
+  
+  /* the parent */
+	.slick-list 
+		margin: -10px -15px
+  
+.wrap_resp
+	.square_flat
+		justify-content: center
+		.frst_sq
+			margin-right: 50px
+
+
+/**** CONDITION PAGE ***/
+
+.s_condition
+	position: relative
+	top: 100px
+	background-image: url(../img/buy_conditions/bg_top_dec.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	// min-height: 800px
+	padding-bottom: 100px
+	z-index: 5
+
+.cond_title, .cond_title_add
+	@include introBoldAlt()
+	text-align: center
+
+.cond_title
+	font-size: 36px
+	margin-top: 50px
+
+.cond_title_add
+	font-size: 24px
+	margin-top: 20px
+
+.list_rules
+	position: relative
+	margin-top: 50px
+	.list_wrap
+		padding: 40px 100px
+		background-color: #fff
+		border-radius: 10px
+
+.list_wrap
+	@include shadow()
+	display: flex
+	justify-content: space-between
+	position: relative
+	.circles_wrap
+		transform: scale(-1, 1) rotate(48deg)
+		right: -100px
+		top: 200px
+		.wrap_for_circles
+			.circle_around
+				position: absolute
+				width: 33px
+				height: 33px
+				&:nth-child(1)
+					right: 0
+					top: -29px
+					width: 23px
+					height: 23px
+				&:nth-child(2)
+					border: 3px solid $lightOrange
+					width: 35px
+					height: 35px
+					bottom: 0
+					left: 50px
+				&:nth-child(3)
+					width: 10px
+					height: 10px
+					left: 27px
+					top: -4px
+
+.list
+	.lst_img
+		position: relative
+		width: 100%
+		height: 80px
+		img
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			position: absolute
+	p
+		text-align: center
+		margin: 30px 0 0 0
+		@include montMd()
+		font-size: 16px
+		color: $silver
+
+
+.doc_type
+	margin-top: 70px
+	@include introBoldAlt()
+	font-size: 24px
+
+.btn_wrap, .doc_type, .aft_doc
+	text-align: center
+
+.aft_doc
+	margin-top: 15px
+	@include montMd()
+	font-size: 16px
+	color: $silver
+
+.btn_wrap
+	margin-top: 40px
+
+.cond_flats
+	top: 95px
+	position: relative
+	// min-height: 500px
+
+
+.quotes_wrap
+	margin: 200px auto 10px
+	position: relative
+	max-width: 700px
+	width: 100%
+	padding-bottom: 150px	
+	margin: auto
+	@include introRegAlt()
+	.qotes_title
+		margin-top: 150px
+		padding-left: 100px	
+		font-size: 30px
+		position: relative
+		z-index: 2
+		&::after
+			z-index: -1
+			content: '“'
+			position: absolute
+			font-size: 400px
+			color: #f1f2f9
+			top: -230px
+			left: -40px
+			display: inline-block
+			height: 100px
+			width: 200px
+
+
+.cond_slider_wrap
+	margin-bottom: 200px
+	max-width: 1400px
+	width: 100%
+	position: absolute
+	left: 50%
+	transform: translateX(-50%)
+	.cond_decor
+		position: relative
+	.slick-slide 
+		margin: 20px 15px
+  
+  /* the parent */
+	.slick-list 
+		margin: -20px -15px
+  
+
+.cond_slider_wrap
+	position: relative
+	padding-bottom: 200px
+	z-index: 2
+	.owl_nav
+		top: 100%
+		.slide_prev
+			top: -90px
+			left: 43%
+		.slide_next
+			top: -90px
+			right: 43%	
+	.triangle
+		position: absolute
+		left: -63px
+		z-index: -2
+		bottom: -26px
+	.rectang
+		position: absolute
+		top: -60px
+		right: -116px
+
+	.decor_circles_wrap1, .decor_circles_wrap2 
+		height: 76px
+		width: 73px
+		position: absolute
+		z-index: 0
+		.decor_circles
+			width: 100%
+			height: 100%
+			position: relative
+			.circle
+				position: absolute
+				border: 4px solid $orange
+				width: 20px
+				height: 20px
+				&:nth-child(1)
+					right: 0
+					top: 10px
+				&:nth-child(2)
+					width: 10px
+					height: 10px
+					left: 20px
+					top: 60px
+
+	.decor_circles_wrap1
+		bottom: 47px
+		left: -60px
+		transform: rotate(-50deg)
+	.decor_circles_wrap2
+		top: -35px
+		right: -35px
+		transform: rotate(86deg)
+
+
+.cond_slider
+	z-index: 5
+	position: relative
+	.slide
+		display: inline-block
+		border: 10px solid #fff
+		background-color: #fff
+		box-shadow: 0 0 32px 2px rgba(0,0,0,.1)
+		.img
+			max-width: 415px
+			height: 300px
+			// box-shadow: 0 0 32px 0px rgba(0,0,0,.1)
+			img
+				width: 100%
+				height: 300px
+	.descr
+		justify-content: space-between
+		padding: 0 10px
+		display: flex
+		margin-top: 32px
+		margin-bottom: 5px
+	p
+		margin: 0
+	.frst_desc
+		@include montBold()
+		font-size: 18px
+		color: $black
+	.cost
+		@include introBoldAlt()
+		font-size: 18px
+		color: $lightOrange
+		color: 
+	.but
+		@include montBold()
+		font-size: 12px
+		color: $silver
+		display: inline-block
+		text-align: center	
+		text-decoration: none	
+		padding: 15px 20px
+		height: 50px
+		border-radius: 5px
+		text-transform: uppercase
+		background-color: #f1f2f9
+		position: relative
+		z-index: 4
+		.grad_class
+			border-radius: 5px
+		&:hover, &:hover
+			color: #fff
+			.grad_class
+				opacity: 1
+				border-radius: 5px
+		&:active
+			background-color: $orange
+
+/****** CONTACTS *****/ 
+
+.s_contacts
+	position: relative
+	top: 100px
+	z-index: 5
+	// min-height: 2000px
+	padding: 80px 0 100px 0
+	.srec, .str
+		position: absolute
+	.srec
+		top: 43%
+		left: -310px	
+	.str
+		top: 48%
+		left: 80px
+		width: 130px
+		height: 110px
+
+.cont_title
+	color: $black
+	@include introBoldAlt()
+	font-size: 30px
+	text-align: center
+
+.map_block_wrap
+	margin-top: 80px
+	position: relative
+	&::after
+		content: ''
+		right: 0
+		top: 0
+		position: absolute
+		width: 100%
+		max-width: 1550px
+		height: 750px
+		background-image: url('../img/contacts/map_big.png')
+		background-size: cover
+		background-position: center
+		z-index: -1
+
+.map_block
+	position: relative
+	.rectang
+		position: absolute
+		top: -60px
+		right: 26%
+		z-index: -1
+		width: 300px
+	.circles_wrap
+		position: absolute
+		top: -90px
+		right: 32%
+
+
+
+.contacts_info
+	@include orangeShad()
+	display: flex
+	@include grad-bg()
+	border-radius: 10px
+	padding: 45px 30px
+	.loc_descr
+		margin: 0 0 0 25px
+		color: #fff
+		@include montMd()
+		font-size: 16px
+		display: flex
+	.top_inf, .bot_info
+		display: flex
+	.bot_info
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	.add
+		font-size: 30px
+		color: #fff
+		@include introBoldAlt()
+		margin-left: 30px
+
+
+	.loc_wrap
+		position: relative
+		top: 0px
+		display: flex
+		.loc_icon
+			background: $blue
+
+.all_schedule
+	margin-top: 20px
+	padding: 45px 30px
+	border-radius: 10px
+	background-color: #fff
+	@include shadow()
+
+.phone_info
+	display: flex
+	.top_info, .bot_info
+		display: flex
+	.bot_info
+		flex-direction: column
+	.hide_d
+		margin-left: 25px
+		line-height: 30px
+		// margin-bottom: 10px
+		@include introBoldAlt()
+		font-size: 30px
+		color: $black
+	.phones
+		margin-top: 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-left: 25px
+		p
+			margin: 0
+			@include montMd()
+			font-size: 16px
+			color: $silver
+		span
+			margin: 0 15px
+	.cons_wrap
+		top: 0
+		.cons_icon
+			top: 0
+			&::after
+				border: 1px solid $blue
+			img
+				left: 7px
+				top: 13px
+				width: 35px
+				height: 30px
+
+.schedule_info
+	margin-top: 40px
+	display: flex
+	.bot_info, .top_info
+		display: flex
+	.schedule
+		display: flex
+		p
+			margin: 0
+			color: $silver
+			font-size: 16px
+			@include montMd()
+		.bold
+			line-height: 24px
+			margin-bottom: 10px
+			@include introBoldAlt()
+			color: $black
+			font-size: 24px
+			text-transform: uppercase
+		.work_d, .weekend
+			margin-left: 40px
+	.sched_wrap
+		top: 0
+		.sched_icon
+			top: 0
+			&::after
+				border: 1px solid $blue
+			img
+				left: 10px
+				top: 13px
+				width: 28px
+				height: 28px
+
+.cont_but
+	margin-top: 30px
+
+.contact_form_wrap
+	margin-top: 20%
+	position: relative
+	margin-bottom: 8%
+
+
+
+.contact_form
+	padding: 45px 0
+	border: 2px solid $lightOrange
+	@include shadow()
+	display: flex
+	border-radius: 10px
+	flex-direction: column
+	position: relative
+	align-items: center
+	.rectangle, .triangle
+		position: absolute
+		z-index: -3
+	.rectangle
+		top: 0
+		right: 0
+	.triangle
+		bottom: 0
+		left: 50px
+	.circles_wrap
+		position: absolute
+		right: 125px
+		top: 107px
+		transform: rotate(52deg) scale(1, -1)
+	.decor_circles_wrap
+		bottom: 110px
+		left: 80px
+		transform: rotate(40deg)
+
+	.form_title
+		text-align: center
+		h2
+			font-size: 24px
+			@include introBoldAlt()
+			color: $black
+		p
+			@include montMd()
+			font-size: 16px
+			color: $silver
+		img
+			width: 50px
+			height: 50px
+			display: inline-block
+			margin-bottom: 20px
+
+	.cont_call
+		margin-top: 50px
+		width: 40%	
+		display: flex
+		flex-direction: column
+		@include montMd()
+		font-size: 14px
+		color: $silver
+
+		input
+			border: transparent
+			outline: none
+			text-align: center
+			border-bottom: 1px solid #f1f2f9
+			padding-bottom: 15px
+			margin-bottom: 40px
+		.orange_button
+			padding-bottom: 20px
+			left: 50%
+			transform: translateX(-50%)
+			margin-bottom: 0
+			max-width: 165px
+			text-transform: uppercase
+			@include montBold()
+
+
+/** SMART PAGE **/ 
+
+.s_smart
+	position: relative
+	z-index: 5
+	top: 100px
+	// min-height: 4000px
+	.smart_title
+		color: $black
+		@include introBoldAlt()
+		font-size: 36px
+		text-align: center
+		margin: 90px 0 60px 0
+
+.tabel
+	position: relative
+	border-radius: 30px
+	.circles_wrap
+		position: absolute
+		transform: scale(1, -1)
+		right: -120px
+		bottom: -50px
+		.wrap_for_circles
+			.circle_around
+				&:nth-child(1)
+					right: 33px
+					top: -18px
+					width: 23px
+					height: 23px
+				&:nth-child(2)
+					border: 4.5px solid $lightOrange
+					width: 33px
+					height: 33px
+					bottom: 0
+					left: 50px
+				&:nth-child(3)
+					width: 10px
+					height: 10px
+					background-color: $lightOrange
+					left: 32px
+					top: 1px
+	.tabel_title
+		border-radius: 10px 10px 0 0 
+		font-size: 18px
+		color: #fff
+		@include introBoldAlt()
+		text-align: center
+		@include grad-bg()
+		padding: 20px 0
+	.table_cols
+		display: flex
+		justify-content: space-between
+		background-color: #f1f2f9
+		padding: 25px 10px
+		sup
+			top: 10px
+			font-size: 10px
+		.row
+			width: 100%
+			margin: auto
+		.itm
+			font-size: 16px
+			@include montBold()
+			&.num
+				display: flex
+				.add
+					margin-left: 20px
+			&.room
+				justify-content: center
+				display: flex
+			&.square, &.cost, &.cost_dol
+				justify-content: center
+				display: flex
+
+.table_info
+	background-color: #fff
+	padding: 10px 0
+	border-radius: 0 0 10px 10px
+	width: 100%
+	margin: auto
+	@include shadow()
+	.cus_row
+		border-radius: 3px
+		width: 99%
+		margin: auto
+		box-shadow: 0 0 27px 1px rgba(0,0,0,.1)
+		color: $silver
+		font-size: 14px
+		line-height: 14px
+		@include montMd()
+	.cus_row:not(last-child)
+		margin-bottom: 10px
+	.cus_c
+		padding-left: 0
+		.num_wr
+			padding: 15px 20px
+			line-height: 14px
+			display: inline-block
+			background-color: #f1f2f9
+
+		.addr, .flat_c, .squ, .cost, .cos_dol
+			display: flex
+			align-items: center
+			flex-direction: column
+			justify-content: center
+
+.table_info2
+	margin: 20px auto
+	width: 99%
+	border-radius: 5px
+	@include shadow()
+	padding: 10px 30px
+	ul
+		li
+			@include montMd()
+			font-size: 14px
+			color: $silver
+			text-align: center	
+			padding-bottom: 15px
+			padding-top: 15px
+			position: relative
+			width: 100%
+			&::after
+				content: ''
+				width: 100%
+				height: 2px
+				background-color: lighten($silver, 45%)
+				bottom: 0
+				left: 0
+				position: absolute
+			&:last-child
+				padding-bottom: 0
+				color: $lightOrange()
+				&::after
+					display: none
+
+.table_info3
+	border-radius: 5px
+	margin: 20px auto 10px
+	width: 99%
+	@include shadow()
+	padding: 20px 50px
+	text-align: center
+	font-size: 14px
+	@include montMd()
+	color: $silver
+	p
+		line-height: 2
+		margin: 0
+	.or_text
+		color: $lightOrange
+
+
+.about_smart
+	margin-top: 250px
+
+.parag_img
+	border: 10px solid #fff
+	@include shadow()
+	background-image: url(../img/smart/parag_img.png)
+	background-size: cover
+	background-position: center
+	height: 375px
+
+.descr_l
+	position: relative
+	@include montMd()
+	font-size: 16px
+	color: $black
+	.par
+		margin-top: 20px
+		padding: 0 10px 0 0
+		font-size: 14px
+		color: $silver
+		line-height: 2
+	.rectang
+		width: 160px
+		height: 185px
+		top: -75px
+		left: -100px
+		position: absolute
+		z-index: -1
+	.decor_circles_wrap
+		transform: rotate(30deg)
+		left: 20px
+		top: -130px
+		.decor_circles
+			.circle
+				border: 4px solid $lightOrange
+				width: 40px
+				height: 40px
+				&:nth-child(1)
+					right: 0
+					top: 10px
+				&:nth-child(2)
+					width: 20px
+					height: 20px
+
+.smart_slide
+	margin-top: 100px	
+
+.info_mobile
+	display: none
+	width: 98%
+	margin: auto
+	padding: 14px
+	border-radius: 5px
+	margin-bottom: 10px	
+	box-shadow: 0 0 35px 2px rgba(0,0,0,.1)
+	h5
+		@include montBold()
+		font-size: 12px
+		margin: 0
+	p
+		@include montMd()
+		font-size: 14px
+		color: $silver
+		margin: 0
+	.add_info_wrap
+		display: none
+	.addr
+		position: relative
+		img
+			position: absolute
+			right: 20px
+			top: 50%
+			z-index: 5
+			cursor: pointer
+	.add_info
+		transition: all .5s ease
+		margin-top: 20px
+		display: flex
+		.f_r
+			margin-right: 50px
+		.f_r, .s_r
+			p
+				margin-bottom: 15px
+
+
+/**** STOCK PAGE ******/
+
+.s_stock
+	position: relative
+	top: 100px
+	z-index: 5
+	min-height: 2000px
+	.nav_bottom_wrap
+		bottom: 190px
+	.rect
+		width: 1028px
+		position: absolute
+		top: -154px
+		right: -577px
+		z-index: -1
+		opacity: 0.1
+		
+	.decor_circles_wrap
+		transform: rotate(-102deg)
+		bottom: 67%
+		right: 185px
+
+
+.stock_title
+	font-size: 30px
+	@include introBoldAlt()
+	text-align: center
+	margin-top: 90px
+
+.main_stock_wrap
+	background-color: #fff
+	margin: 90px auto 0 
+	padding: 30px 20px
+	@include shadow()
+	max-width: 1440px
+	width: 100%
+	position: relative
+	.triangle
+		position: absolute
+		top: -88px
+		left: -76px
+		z-index: -1
+	.decor_circles_wrap
+		position: absolute
+		top: -62px
+		left: -57px
+		z-index: -1
+		transform: rotate(218deg)
+		.decor_circles 
+			.circle:nth-child(1)
+				width: 30px
+				height: 30px
+
+.main_stock
+	&_img
+		img
+			box-shadow: 0 0 30px 4px rgba(0,0,0,.1)
+			max-width: 100%
+			width: 100%
+			height: auto
+			display: block
+	&_descr
+		position: relative
+		height: 100%
+		.date
+			@include introBoldAlt()
+			font-size: 14px
+			color: #fff
+			@include grad-bg()
+			display: inline-block
+			padding: 5px 15px
+			border-radius: 5px
+			box-shadow: 0 12px 27px 4px rgba(249,123,45,.3)
+		h3
+			@include montBold()
+			font-size: 36px
+			color: $black
+			margin: 20px 0
+		.sub_des
+			max-width: 540px
+			font-size: 14px
+			@include montMd()
+			color: $silver
+			line-height: 2.2
+		.more
+			position: absolute
+			bottom: 0
+			@include montBold()
+			font-size: 12px
+			text-transform: uppercase
+			color: $lightOrange
+			letter-spacing: 1px
+			text-decoration: none
+			img
+				position: relative
+				bottom: 2px
+				margin-left: 10px
+				transition: all .3s ease
+			&:hover
+				img
+					margin-left: 20px
+
+.all_stock
+	position: relative
+	margin-bottom: 300px
+	.triangle
+		z-index: -1
+		position: absolute
+		bottom: -136px
+		left: 289px
+		width: 121px
+		height: 100px
+	.rect
+		z-index: -1
+		position: absolute
+		top: 65%
+		bottom: 0
+		right: 60%
+		height: 500px
+	.decor_circles_wrap
+		z-index: -1
+		transform: rotate(-44deg)
+		bottom: 123px
+		left: 152px
+	.stock_wrap
+		background-color: #fff
+		@include shadow()
+		padding: 10px 10px 20px 10px
+		position: relative
+		margin-top: 50px
+	.img_stock
+		img
+			max-width: 100%
+			width: 100%
+			// margin: auto
+			height: auto
+			box-shadow: 0 0 12px 3px rgba(0,0,0,.1)
+	.after_img
+		min-height: 315px
+		height: 100%
+		padding: 20px 25px 10px
+	.alw_bot
+		position: absolute
+		bottom: 25px
+		width: 85%
+
+	.date_min
+		@include introBoldAlt()
+		font-size: 14px
+		color: #fff
+		padding: 5px 15px
+		@include grad-bg()
+		border-radius: 5px
+		position: absolute
+		top: 20px
+		left: 20px
+	h3
+		font-size: 24px
+		line-height: 1.2
+		@include montBold()
+		margin: 5px 0 20px
+	p
+		@include montMd()
+		font-size: 14px
+		color: $silver
+		line-height: 2
+	.more
+		margin-top: 40px
+		@include montBold()
+		font-size: 12px
+		letter-spacing: 1px
+		color: $lightOrange
+		display: flex
+		justify-content: space-between
+		text-transform: uppercase
+		text-decoration: none
+		img
+			width: 14px
+			height: 9px
+			position: relative
+			top: 5px
+
+/**** STOCK OPEN PAGE ***/
+
+.s_stock_open
+	position: relative
+	top: 100px
+	z-index: 5 
+
+	.rect
+		position: absolute
+		opacity: .1
+		top: -3%
+		width: 1000px
+		right: -28%
+		z-index: -1
+
+	.decor_circles_wrap
+		right: 147px
+		top: 700px
+		transform: rotate(-105deg)
+		z-index: -1
+
+	.rect_gr
+		z-index: 0
+		position: absolute
+		left: -10px
+		bottom: 300px
+		width: 300px
+
+	.decor_circles_news
+		height: 76px
+		width: 73px
+		position: absolute
+		z-index: 0
+		transform: rotate(-43deg)
+		bottom: 400px
+		left: 100px
+		.decor_circles
+			width: 100%
+			height: 100%
+			position: relative
+			.circle
+				position: absolute
+				border: 4px solid $orange
+				width: 20px
+				height: 20px
+				&:nth-child(1)
+					right: 0
+					top: 10px
+				&:nth-child(2)
+					width: 10px
+					height: 10px
+					left: 20px
+					top: 60px
+
+
+
+	.top_title
+		margin-top: 90px
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+			h2
+				@include introBoldAlt()
+				font-size: 30px
+			.prev_block, .next_block
+				img
+					width: 15px
+					height: 10px
+				a
+					display: flex
+					align-items: center
+					@include montBold()
+					font-size: 14px
+					color: $silver
+					text-decoration: none
+			.prev_block
+				img
+					margin-right: 20px
+			.next_block
+				img
+					margin-left: 20px
+
+.slick-slide
+	outline: none
+
+.info_news_wrap
+	position: relative
+	max-width: 1440px
+	width: 100%
+	margin: 50px auto 200px
+	padding: 0 0 70px 0
+	@include shadow()
+	background-color: #fff
+
+	.triangle
+		position: absolute
+		top: -73px
+		left: -67px
+		z-index: -1
+	.decor_circles_wrap
+		top: -41px
+		left: -42px
+		transform: rotate(195deg)
+		z-index: -1
+		.decor_circles 
+			.circle:nth-child(1)
+				width: 30px
+				height: 30px
+
+	.curr_slide
+		margin: 20px 0
+		text-align: center
+		color: $black
+		@include introBoldAlt()
+		font-size: 16px
+
+	.date_news
+		font-size: 16px
+		@include introBoldAlt()
+		color: $silver
+		text-align: center
+		padding: 25px 0
+		margin-right: 30px
+
+	.owl_nav
+		top: 450px
+		width: 88%
+		z-index: 20
+		.slide_prev, .slide_next
+			border: 2px solid $lightOrange
+			img
+				top: 5px
+				left: 13px
+		.slide_prev
+			border: 2px solid #d6d8d9
+			top: -90px
+			left: 20px
+		.slide_next
+			top: -90px
+			right: 20px
+
+	.new_descr
+		max-width: 810px
+		width: 100%
+		margin: auto
+		h2
+			font-size: 36px
+			@include montBold()
+			color: $black
+			margin-bottom: 25px
+			margin-top: 20px
+		p
+			@include montMd()
+			font-size: 16px
+			color: $silver
+			line-height: 2
+
+.slider_news
+	.slide
+		.img_wr
+			height: 600px
+			img
+				display: block
+				max-width: 100%
+				width: 100%
+				@include shadow()
+				height: 100%
+
+
+/** NEWS PAGE WRAP **/
+
+.s_news
+	position: relative
+	top: 100px
+	z-index: 5
+	// min-height: 4000px
+	.nav_bottom_wrap
+		bottom: 190px
+	.rect
+		width: 1028px
+		position: absolute
+		top: -78px
+		right: -577px
+		z-index: -1
+		opacity: 0.1
+		
+	.circles_wrap
+		transform: scale(-1,-1) rotate(-10deg)
+		top: 737px
+		right: 165px
+
+.nav_wrap
+	max-width: 1440px
+	width: 100%
+	margin: 130px auto 20px
+	.nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.nav_titles
+			width: 26%
+			align-items: center
+			justify-content: space-between
+			margin: 0
+			display: flex
+			@include introBoldAlt()
+			font-size: 16px
+			color: $black
+			a
+				text-decoration: none
+			li
+				&.active
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						z-index: 1
+						left: 0
+						bottom: -6px
+						height: 7px
+						width: 100%
+						background: url(../img/svg/wave-line.svg) 0 no-repeat
+						background-size: cover
+
+		.line
+			width: 60%
+			height: 2px
+			background-color: #f1f2f9
+		h3
+			@include introBoldAlt()
+			font-size: 30px
+			color: $black
+
+
+
+.news_title
+	font-size: 30px
+	@include introBoldAlt()
+	text-align: center
+	margin-top: 90px
+
+.main_news_wrap
+	background-color: #fff
+	margin: 90px auto 0 
+	padding: 30px 20px
+	@include shadow()
+	max-width: 1440px
+	width: 100%
+	position: relative
+	.triangle
+		position: absolute
+		top: -88px
+		left: -76px
+		z-index: -1
+	.decor_circles_wrap
+		position: absolute
+		top: -62px
+		left: -57px
+		z-index: -1
+		transform: rotate(218deg)
+		.decor_circles 
+			.circle:nth-child(1)
+				width: 30px
+				height: 30px
+
+.main_news
+	&_img
+		img
+			box-shadow: 0 0 30px 4px rgba(0,0,0,.1)
+			max-width: 100%
+			width: 100%
+			height: auto
+			display: block
+	&_descr
+		padding-left: 40px
+		position: relative
+		height: 100%
+		.date
+			@include introBoldAlt()
+			font-size: 14px
+			color: #fff
+			@include grad-bg()
+			display: inline-block
+			padding: 5px 15px
+			border-radius: 5px
+			box-shadow: 0 12px 27px 4px rgba(249,123,45,.3)
+		h3
+			@include montBold()
+			font-size: 36px
+			color: $black
+			margin: 20px 0
+		.sub_des
+			max-width: 540px
+			font-size: 14px
+			@include montMd()
+			color: $silver
+			line-height: 2.2
+		.more
+			position: absolute
+			bottom: 0
+			@include montBold()
+			font-size: 12px
+			text-transform: uppercase
+			color: $lightOrange
+			letter-spacing: 1px
+			text-decoration: none
+			img
+				position: relative
+				bottom: 2px
+				margin-left: 10px
+				transition: all .3s ease
+			&:hover
+				img
+					margin-left: 20px
+
+.all_news
+	padding-bottom: 350px
+	position: relative
+	// margin-bottom: 300px
+	.triangle
+		z-index: -1
+		position: absolute
+		bottom: 137px
+		left: 261px
+		width: 121px
+		height: 100px
+	.rect
+		z-index: -1
+		position: absolute
+		top: 61%
+		bottom: 0
+		right: 66%
+		width: 872px
+		height: 455px
+	.decor_circles_wrap
+		z-index: -1
+		transform: rotate(-44deg)
+		bottom: 621px
+		left: 152px
+	.news_wrap
+		background-color: #fff
+		@include shadow()
+		padding: 10px 10px 20px 10px
+		position: relative
+		margin-top: 50px
+	.img_news
+		img
+			max-width: 100%
+			width: 100%
+			// margin: auto
+			height: auto
+			box-shadow: 0 0 12px 3px rgba(0,0,0,.1)
+	.after_img
+		min-height: 315px
+		height: 100%
+		padding: 20px 25px 10px
+	.alw_bot
+		position: absolute
+		bottom: 25px
+		width: 85%
+
+	.date_min
+		@include introBoldAlt()
+		font-size: 14px
+		color: #fff
+		padding: 5px 15px
+		@include grad-bg()
+		border-radius: 5px
+		position: absolute
+		top: 20px
+		left: 20px
+	h3
+		font-size: 24px
+		line-height: 1.2
+		@include montBold()
+		margin: 5px 0 20px
+	p
+		@include montMd()
+		font-size: 14px
+		color: $silver
+		line-height: 2
+	.more
+		margin-top: 40px
+		@include montBold()
+		font-size: 12px
+		letter-spacing: 1px
+		color: $lightOrange
+		display: flex
+		justify-content: space-between
+		text-transform: uppercase
+		text-decoration: none
+		img
+			width: 14px
+			height: 9px
+			position: relative
+			top: 5px 
+
+.hod_stroyki_wrap
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto 200px
+	position: relative
+	.decor_circles_wrap
+		left: 260px
+		top: 20px
+		transform: rotate(250deg)
+	.rect
+		position: absolute
+		width: 700px
+		right: 100px
+		top: 500px
+
+	.owl_nav
+		width: 77%
+		top: 440px
+		.slide_prev
+			border-color: rgb(214, 216, 217)
+	h3
+		@include introBoldAlt()
+		font-size: 30px
+		text-align: center
+		margin: 0
+	.slider_all
+		.slide
+			position: relative
+			height: 600px
+			padding: 40px
+			img
+				border: 10px solid #fff
+				@include shadow()
+				display: block
+				max-width: 100%
+				width: 100%
+				height: 100%
+			.build_date
+				position: absolute
+				bottom: 80px
+				background-color: #fff
+				left: 50%	
+				transform: translateX(-50%)
+				@include introBoldAlt()
+				font-size: 14px
+				text-align: center
+				border-radius: 3px
+				padding: 5px 10px
+
+/**** READY_FLAT PAGE *****/ 
+
+.s_ready_flat
+	position: relative
+	top: 100px
+	z-index: 5
+	min-height: 3000px
+
+.sect_descr
+	max-width: 1440px
+	width: 100%
+	margin: 170px auto 0
+	.l_descr
+		position: relative
+		padding-right: 33px
+		.rect
+			position: absolute
+			z-index: -1
+			left: -100px
+			top: -50px
+			opacity: .1
+			width: 200px
+		.circles_wrap
+			position: absolute
+			z-index: -1
+			top: -70px
+			transform: scale(1, -1)
+			left: 10px
+			.wrap_for_circles 
+				.circle_around
+					&:nth-child(2)
+						left: 54px
+					&:nth-child(1)
+						right: 8px
+						top: 56px
+					&:nth-child(3)
+						left: 27px
+						top: 26px
+		p
+			@include montMd()
+			font-size: 14px
+			color: $silver
+			line-height: 2
+			&:first-child
+				font-size: 16px
+				color: $black
+		a
+			margin-top: 40px
+			.grad_trans
+				border-radius: 30px
+				transition: all .3s ease
+			&:hover
+				.grad_trans
+					opacity: 1
+
+	.ready_img
+		max-width: 100%
+		width: 100%
+		height: 370px
+		position: relative
+		.img
+			height: 100%
+			border: 10px solid #fff
+			@include shadow()
+			width: 100%
+		.triangle
+			position: absolute
+			z-index: -1
+			bottom: -50px
+			right: -100px
+		.decor_circles_wrap
+			z-index: -1
+			right: -50px
+			transform: scale(-1, -1)
+			bottom: -50px
+
+	.add_info
+		color: $silver
+		@include montMd()
+		font-size: 14px
+		margin-top: 80px
+
+.ready_main
+	max-width: 1440px
+	width: 100%
+	position: relative
+	margin: auto
+	margin-top: 150px
+	.rect, .triangle
+		position: absolute
+		left: 0
+	.rect
+		opacity: .1
+		width: 1000px
+		top: 250px
+		left: -840px
+	.triangle
+		height: 111px
+		width: 133px
+		top: 430px
+		left: 100px
+	.circles_wrap
+		top: 200px
+		left: -20px
+		transform: rotate(-90deg)
+		.wrap_for_circles 
+			.circle_around
+				&:nth-child(2)
+					border: 4px solid $lightOrange
+
+	h3
+		text-align: center
+		@include introBoldAlt()
+		font-size: 30px
+		color: $black
+		margin-bottom: 90px
+	.ready_item
+		margin-bottom: 100px
+		max-width: 340px
+		width: 100%
+		h4
+			line-height: 1.1
+			@include introBoldAlt()
+			font-size: 23px
+			margin-bottom: 15px
+		p
+			color: $silver
+			@include montMd()
+			font-size: 14px
+
+.design_ready
+	h3
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+/** MASK INVALID **/ 
+.incomplete
+	animation: invalid 1s linear infinite
+	-webkit-animation: invalid 1s linear infinite
+	-moz-animation: invalid 1s linear infinite
+	-o-animation: invalid 1s linear infinite
+
+
+
+
+/*********** PRELOADER ********/ 
+
+
+/* ------ LOADER ------ */
+.loader 
+	&-wrap 
+		overflow: hidden
+		height: 100vh
+		width: 100vw
+		background-color: $blue
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 50
+	width: 160px
+	display: flex
+	justify-content: space-between
+	&-itm 
+		width: 20px
+		height: 30px
+		background-image: -moz-linear-gradient( 0deg, rgb(255,134,50) 0%, rgb(218,72,22) 100%)
+		background-image: -webkit-linear-gradient( 0deg, rgb(255,134,50) 0%, rgb(218,72,22) 100%)
+		background-image: -ms-linear-gradient( 0deg, rgb(255,134,50) 0%, rgb(218,72,22) 100%)
+		filter: opacity(0)
+		transform: skewX(-25deg) scale(0.1)
+		animation: animate 0.8s infinite alternate
+		border-radius: 4px
+
+		$elements: 6
+		$start: 0
+		$unit: 's'
+		@for $i from 0 to $elements 
+			&:nth-child(#{$i + 1}) 
+				animation-delay: $start#{$unit}
+				$start: $start + 0.2
+
+/* ------ ANIMATION ------ */
+
+@-webkit-keyframes animate 
+	to 
+		-webkit-filter: opacity(1)
+		filter: opacity(1)
+		-webkit-transform: skewX(-25deg) scale(1)
+		transform: skewX(-25deg) scale(1)
+
+@keyframes animate 
+	to 
+		-webkit-filter: opacity(1)
+		filter: opacity(1)
+		-webkit-transform: skewX(-25deg) scale(1)
+		transform: skewX(-25deg) scale(1)
+
+@-webkit-keyframes invalid 
+	0% 
+		border-bottom: 1px solid #FFF
+	50% 
+		border-bottom: 1px solid #f00
+	100% 
+		border-bottom: 1px solid #FFF
+
+@keyframes invalid 
+	0% 
+		border-bottom: 1px solid #FFF
+	50% 
+		border-bottom: 1px solid #f00
+	100% 
+		border-bottom: 1px solid #FFF
+
+@-webkit-keyframes focus 
+	from 
+		-webkit-transform: rotate(-15deg)
+		transform: rotate(-15deg)
+	50% 
+		-webkit-transform: rotate(15deg)
+		transform: rotate(15deg)
+	to 
+		-webkit-transform: rotate(-15deg)
+		transform: rotate(-15deg)
+
+@keyframes focus 
+	from 
+		-webkit-transform: rotate(-15deg)
+		transform: rotate(-15deg)
+	50% 
+		-webkit-transform: rotate(15deg)
+		transform: rotate(15deg)
+	to 
+		-webkit-transform: rotate(-15deg)
+		transform: rotate(-15deg)
+
+/*** CUSTOM MMENU ****/
+
+.mm-navbar 
+	position: relative
+	height: auto
+	border: none
+	.mm-navbar__title 
+		padding: 0
+		img
+			width: 128px
+			height: auto
+			margin: 10px 0 35px
+
+.mm-listitem:after
+	display: none
+
+html.mm-wrapper_opened
+	overflow-y: scroll
+
+.mm-panels > .mm-panel.mm-panel_has-navbar
+	right: -18px
+	background-color: $blue
+
+.mm-panel:after, .mm-panel:before
+	height: 0
+
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview
+	margin-top: 0
+
+.mm-listview
+	> li
+		> a
+			position: relative
+			transition: all .25s ease
+			padding: 
+				left: 14%
+				right: 14%
+				top: 8px
+			&:hover
+				color: $lightOrange
+		&.active
+			&>a, .fas
+				color: $lightOrange
+
+
+/******** END ******/ 
+
+
+/* MEDIA */ 
+
+
+
+
+@import "media" // Always at the end

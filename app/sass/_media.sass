@@ -1,0 +1,2183 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+@media screen and (min-device-width: 1366px)
+	.hide_menu
+		display: flex
+	.header_nav 
+		.mnu_toggle
+			display: none
+	.menu_mob
+		display: none
+	.s_prog_about 
+		.blue_sect_dec
+			background-size: cover 
+
+@media screen and (max-device-width: 1400px) and (min-device-width: 1280px)
+	.s_stock_open
+		padding: 0 50px
+	.hide_menu
+		display: flex
+	.decorative
+		right: -75px
+		top: -93px
+		width: 540px
+	.header_nav 
+		li:not(:last-child)
+			margin-right: 20px
+		.mnu_toggle
+			display: none
+
+	.main_sales 
+		.sales_content 
+			.button
+				margin-top: 10px
+			p
+				margin: 10px 0
+	.main-slider 
+		.slide-txt
+			line-height: 1.6
+
+	.menu_mob
+		display: none
+
+	// .s_prog_about 
+	// 	.blue_sect_dec
+	// 		background-size: contain 
+
+	/** MAIN PLAN **/ 
+
+	.top_bl_wrap 
+		top: 0
+		.top_bl
+			border-top: none
+			border-left: none
+			border-right: none  
+
+	/* PLANIROVKA */
+
+	.flat 
+		margin: 0px 20px
+		padding: 50px 43px
+	.flat_descr
+		margin-right: 0
+	.flat_title 
+		.fl_prev
+			left: 87px
+		.fl_next
+			right: 87px 
+
+	/** NEWS PAGE ***/ 
+
+	.nav_wrap
+		width: 97%
+
+@media screen and (max-device-width: 1280px) and (min-device-width: 1024px)
+	.hide_menu
+		display: none
+	.main-slider
+		.slide-txt
+			font-size: 30px
+			margin-top: 20px
+		.slide-all
+			top: 50%
+		.slick-next
+			top: 75%
+			left: 75%
+			height: 65px
+			width: 65px
+
+	.circle
+		width: 25px
+		height: 25px
+		top: 71%
+		left: 85%
+
+	.dec_fig2 
+		img
+			width: 30px
+			height: 25px
+		left: 86%
+		top: 62%
+
+	.dec_fig
+		top: 59%
+		left: 92%
+		img
+			width: 20px
+			height: 13px
+
+	.decorative
+		right: -30px
+
+	.main_foot
+		transform: translateX(-36%)
+
+	.menu_mob
+		display: none
+
+	/**** ABOUT PAGE ****/
+
+	.prog_title
+		padding: 0 50px
+
+	.s_prog_about 
+		min-height: 656px
+		.blue_sect_dec
+			// padding-bottom: 90px
+			// // height: 126.5px
+			// background-size: contain 
+	.circles_descr 
+		.item
+			p
+				text-align: center
+				margin-top: 30px
+		.itm_circle .plan p
+			text-align: left
+
+	.slider_wrap 
+		.circles_wrap
+			bottom: 53px
+			left: 19px
+
+	.circles_all
+		top: 189px
+
+	.s_getflat
+		.circles_wrap, .decor_circles_wrap
+			display: none
+
+	/*** MAIN PLAN **/
+
+	.top_bl_wrap 
+		top: 0
+		.top_bl
+			border-left: none
+			border-right: none  
+			border-top: none  
+			padding: 40px 24px 0
+
+	.plan_title
+		font-size: 36px
+
+	.after_title
+		margin-top: 30px
+
+	.radio_wrap 
+		.radio:not(:last-child)
+			margin-right: 15px
+	.metr_square 
+		input
+			max-width: 70px
+
+	.s_planmain 
+		.rectangle, .decor_circles_wrap
+			display: none
+
+	/** PLANIROVKI ALL **/
+
+	.butplusreb
+		margin-bottom: 30px 
+
+	.s_plans 
+		.triang
+			left: -63px
+			bottom: -37px
+		.decor_circles_wrap
+			left: 85px
+			bottom: -75px
+			z-index: 1
+
+	/** PLANIROVKA **/
+
+	.s_flat
+		min-height: 2100px
+
+	.flat 
+		margin: 0px 20px
+		padding: 50px 43px
+	.flat_descr
+		margin-right: 0
+	.flat_title 
+		.fl_prev
+			left: 87px
+		.fl_next
+			right: 87px
+
+	.flat_items 
+		.l_bl, .r_bl
+			flex-direction: column
+
+	.slider_flat_wrap
+		top: 1100px 
+		.owl_nav 
+			.slide_prev
+				left: 88%
+
+	/** CONDITION PAGE **/
+
+	.list_rules 
+		.list_wrap
+			padding: 40px 50px
+
+	.cond_title
+		display: none
+	.cond_title_add
+		font-size: 33px
+		margin-top: 50px
+
+	.list_wrap 
+		.circles_wrap
+			left: -54px
+			top: -85px
+			transform: scale(-1,1) rotate(-161deg)
+
+	.list 
+		p
+			font-size: 14px
+
+	.cond_slider_wrap 
+		.decor_circles_wrap2
+			top: -83px
+			right: 3px
+		.decor_circles_wrap1
+			bottom: -29px
+			left: -34px
+
+	/*** CONTACT PAGE **/
+
+	.s_contacts 
+		.srec, .str
+			display: none
+
+	.map_block
+		padding-top: 50%
+		.circles_wrap
+			top: -90px
+			right: 15%
+		.rectang
+			right: 4%  
+
+	.all_schedule
+		margin-top: 0
+
+	.contacts_info
+		flex-direction: column
+		// padding: 0px 20px 0 0 
+		.loc_descr
+			flex-direction: column
+			margin: 35px 0 0 -45px 
+
+	.contact_form 
+		.rectangle
+			right: -118px
+		.triangle
+			left: -84px
+		.circles_wrap
+			right: 25px
+		.decor_circles_wrap
+			left: -20px
+			bottom: 100px
+
+	.contact_form_wrap
+		margin-top: 15%
+
+	/*** SMART PAGE ****/
+
+	.tabel 
+		.table_cols 
+			.itm
+				font-size: 14px
+		.circles_wrap
+			right: 98%
+			bottom: 100%
+			transform: scale(1, -1) rotate(60deg)
+
+	.parag_img
+		height: 280px
+
+	.cond_slider 
+		.slide 
+			.img 
+				height: 280px
+				max-width: 600px
+				img
+					height: 280px
+
+	.cond_slider_wrap 
+		.decor_circles_wrap2
+			display: none
+		.decor_circles_wrap1
+			bottom: -75px
+			left: 93px
+			transform: rotate(-100deg)
+
+	/*** STOCK PAGE *****/
+
+	.main_stock_wrap, .main_news_wrap
+		margin: 65px auto 0
+		.decor_circles_wrap
+			transform: rotate(207deg)
+			top: -62px
+			left: 35px
+		.triangle
+			left: -113px
+
+	.s_stock, .s_news
+		.decor_circles_wrap
+			display: none
+
+	.main_stock_descr, .main_news_descr
+		margin-left: 34px
+		h3
+			font-size: 29px
+			margin: 13px 0
+		p
+			line-height: 2.1
+
+	.all_stock, .all_news 
+		.triangle
+			left: -58px
+
+	.stock_title, .news_title 
+		margin-top: 56px
+
+	/*** STOCK OPEN PAGE ***/ 
+
+	.s_stock_open
+		padding: 0 25px
+
+	.info_news_wrap 
+		.owl_nav
+			width: 98%
+		.decor_circles_wrap
+			left: -19px
+
+	/*** NEWS PAGE ***/
+
+	.main_news_descr
+		margin: 0
+		padding-left: 0
+		h3
+			font-size: 24px
+			margin-top: 20px
+
+	.s_news 
+		.decor_circles_wrap
+			display: block
+		.rect
+			width: 818px
+			top: -78px
+			right: -535px
+		.circles_wrap
+			top: 564px
+			right: -24px
+			z-index: -1
+
+	.nav_wrap
+		width: 96%
+		.nav 
+			.nav_titles
+				width: 36%
+			.line
+				width: 45%
+
+	.all_news 
+		.rect
+			right: 677px
+			top: 1878px
+		.triangle
+			left: 140px
+			bottom: 170px
+
+	.hod_stroyki_wrap 
+		.decor_circles_wrap
+			left: -6px
+			top: 20px
+		.owl_nav 
+			width: 85%
+			top: 95px
+		.rect
+			right: -306px
+			top: 243px
+
+
+
+
+		
+
+@media screen and (max-device-width: 1024px) and (min-device-width: 768px)
+	.hide_menu, .hide_menu1, .hide_menu2
+		display: none
+	.header_nav 
+		li:not(:last-child)
+			margin-right: 20px
+		.mnu_toggle
+			display: flex
+
+	.header_nav 
+		li
+			font-size: 13px
+		.nav_cnt
+			top: 0px
+
+	.phone_warp 
+		top: 0px
+		.phone
+			font-size: 14px
+		.phone_icon
+			top: -13px
+			&::after
+				left: -7px
+				width: 50px
+				height: 50px
+			img
+				left: -5px
+				width: 28px
+				height: 28px
+
+	.main_sales
+		top: 80px
+		.sales_content 
+			padding: 0
+			margin: 0
+			p
+				margin-top: 10px
+			.button
+				margin-top: 0
+	
+	.decorative
+		right: -100px
+		top: -120px
+
+	.main-slider 
+		.slide-txt
+			line-height: 1.7
+			margin-top: 25px
+			font-size: 24px
+		.slide-all
+			top: 50%
+		.slick-next
+			height: 65px
+			width: 65px
+			top: 73%
+			left: 70%
+
+	.circle
+		top: 69%
+		left: 82%
+
+	.dec_fig2 
+		left: 83%
+		top: 58%
+		img
+			width: 30px
+			height: 25px
+
+	.dec_fig 
+		img
+			width: 22px
+			height: 14px		
+		left: 93%	
+		top: 54%
+
+	.main_foot
+		transform: translateX(-33%)
+
+	.menu_mob
+		display: none
+
+	/**** PAGE ABOUT ****/
+
+	.prog_title
+		top: 90px
+		padding: 0 20px
+		.title_wrap 
+			h2 
+				font-size: 30px 
+				margin-bottom: 30px
+			p
+				font-size: 13px
+		.img_wrap_all 
+			.circles_wrap
+				top: -73px
+				left: -82px
+			.circle_alone
+				bottom: -46px
+				right: 20px
+			.triangle
+			 left: -80px
+		.img_wrap
+			margin: 130px auto 0
+
+	.s_prog_title
+		min-height: 725px
+
+	.s_prog_about
+		min-height: 600px
+
+	.circles_descr 
+		.item 
+			text-align: center
+			p
+				margin-top: 30px
+				line-height: 1.5
+			.itm_circle
+				width: 100px
+				height: 100px
+				span
+					font-size: 30px
+				.plan 
+					top: 19px
+					left: 19px
+					p
+						text-align: left
+						font-size: 20px
+						margin-left: 14px
+					.ot, .do
+						font-size: 10px
+					.ot
+						top: 17px
+					.do
+						top: 49px
+
+	.slider_wrap
+		top: 428px
+		.dec_rectangl
+			top: -65px
+			left: -291px
+		.dec_triangl 
+			right: -34px
+			top: 356px
+			bottom: 3px
+		.circles_wrap
+			bottom: 50px
+			left: 21px
+
+	.circles_all
+		top: 130px
+
+	.s_accomplishment
+		min-height: 1100px
+		padding-top: 339px
+
+	.s_getflat
+		padding-top: 90px
+		min-height: 1224px
+		.flat_examples .circles_wrap
+			display: none
+		.decor_circles_wrap
+			display: none
+	.flat_examples 
+		.triangle
+			bottom: -130px
+			left: 61px
+		.rectang
+			top: 465px
+			right: -50px
+
+
+	.triger_flats_wrap
+		display: block
+		margin-top: 30px
+		font-size: 18px
+		// width: 100%
+		text-align: center
+		@include introBoldAlt()
+		.triger_flats
+			display: inline-block
+			padding: 5px 10px
+			background-color: #f1f2f9
+			border-radius: 50px
+			.triger_1, .triger_2
+				display: inline-block
+			.triger_1 
+				margin-right: 20px
+			.active_trig
+				padding: 5px 15px
+				border-radius: 30px
+				color: $lightOrange
+				background-color: #fff
+
+	.flat_all, .flat_simple
+		transition: all .5s ease
+		position: absolute
+		z-index: 20
+	.flat_all
+		transform: scale(0.9)
+		top: -50px
+	.flat_simple
+		z-index: 21
+
+	.comunicate
+		display: flex
+		flex-direction: column
+		.phones
+			margin-left: 0
+		h5
+			font-size: 18px
+		p
+			font-size: 14px
+
+	.scnd_row
+		margin-top: 60px
+
+	.col_footer
+		flex-direction: column
+		.footer_nav, .sicial_wrap
+			display: flex
+			justify-content: flex-end
+		.footer_nav
+			margin-right: 0
+			margin-bottom: 10px
+
+
+	/*** MAIN PLAN****/ 
+
+	.top_bl_wrap 
+		top: 0
+		.top_bl
+			padding: 40px 60px 0
+			border-top: none
+			border-left: none
+			border-right: none 
+			.triangle_dec
+				display: none
+
+	.flats_links
+		flex-direction: column
+	.flats_row1
+		margin-bottom: 30px
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			width: 100%
+			display: inline-block
+			height: 3px
+			bottom: -15px
+			left: 0
+			background-color: #fff
+
+	.plan_title
+		font-size: 36px
+		line-height: 1.3
+		margin-top: 100px
+
+	.flats_links
+		margin-top: 50px
+
+	.s_planmain 
+		.rectangle, .decor_circles_wrap
+			display: none
+
+	.metr_square
+		margin-top: 50px
+	.radio_wrap, .metr_square
+		justify-content: center
+
+	/**** PLANIROVKI ALL *****/
+
+	.butplusreb
+		margin-bottom: 30px 
+
+	.s_plans 
+		.circles_wrap
+			display: none
+		.triang
+			z-index: 0
+			display: none
+		.decor_circles_wrap
+
+	// .img_wrap 
+	//   padding: 54px 29px
+
+	/** PLANIROVKA **/
+
+	.flat_items 
+		.l_bl, .r_bl
+			flex-direction: column 
+
+	.s_flat
+		min-height: 2100px
+		.flat
+			margin: 0
+			padding: 80px 20px
+
+	.slider_flat_wrap
+		top: 1150px 
+		.owl_nav 
+			.slide_prev
+				left: 82%
+
+	.flat_title 
+		.fl_next 
+			.img_span 
+				left: 20px
+				top: -12px
+
+	.slider_flat_wrap 
+		.triang
+			display: none
+		.circles_wrap
+			display: none
+
+	/** CONDITION PAGE **/ 
+
+	.list_rules 
+		.list_wrap
+			padding: 40px 50px
+
+	.cond_title
+		display: none
+	.cond_title_add
+		font-size: 33px
+		margin-top: 50px
+
+	.list_wrap 
+		.circles_wrap
+			display: none
+
+	.list 
+		p
+			font-size: 14px
+
+	.flat_descr
+		margin-right: 35px
+
+	.cond_slider_wrap
+		.owl_nav
+			top: 95%
+			.slide_next
+				right: 40%
+			.slide_prev
+				left: 40%
+		margin-bottom: 100px 
+		.rectang
+			right: -180px
+		.decor_circles_wrap2
+			top: -102px
+			right: 50px
+		.decor_circles_wrap1
+			bottom: -81px
+			left: 0
+
+	/** CONTACT PAGE **/
+	.s_contacts 
+		.srec, .str
+			display: none
+		.cont_but
+			text-align: center
+
+	.map_block
+		padding-top: 78%
+		.circles_wrap
+			top: -90px
+			right: 15%
+		.rectang
+			right: 4%  
+
+	.map_block_wrap::after
+		background-image: url(../img/contacts/map_small.png)
+
+	.all_schedule
+		margin-top: 0
+
+	.contacts_info
+		flex-direction: column
+		// padding: 0px 20px 0 0 
+		.loc_descr
+			flex-direction: column
+			margin: 35px 0 0 -45px 
+
+	.contact_form 
+		.rectangle
+			right: -118px
+		.triangle
+			left: -84px
+		.circles_wrap
+			right: 25px
+		.decor_circles_wrap
+			left: -20px
+			bottom: 100px
+
+	.contact_form_wrap
+		margin-top: 15% 
+
+	/*** SMART PAGE ***/
+
+	.s_smart 
+		.smart_title
+			font-size: 30px
+
+	.tabel 
+		.table_cols 
+			.itm.room
+				font-size: 14px 
+			.itm
+				font-size: 11px
+				&.room
+					font-size: 11px
+			sup
+				top: 5px
+		.circles_wrap
+			display: none
+
+	.cos_dol
+		line-height: 2.5
+
+	.table_info2
+		padding: 10px
+
+	.table_info3
+		padding: 20px 10px
+
+	.about_smart
+		margin-top: 70px
+
+	.descr_l 
+		.decor_circles_wrap
+			transform: rotate(-100deg)
+			left: 94%
+			top: -503px
+
+	.parag_img
+		margin-bottom: 100px
+
+	.cond_slider 
+		.descr
+			padding: 0
+		.flat_descr
+			margin-right: 0
+		.frst_desc
+			font-size: 16px
+		.slide 
+			.img 
+				height: 270px
+				max-width: 600px
+				img
+					height: 270px
+
+	.cond_slider_wrap 
+		.decor_circles_wrap2
+			display: none
+		.decor_circles_wrap1
+			bottom: -75px
+			left: 93px
+			transform: rotate(-100deg)
+
+	/*** STOCK PAGE ***/
+
+	.stock_title, .news_title 
+		margin-top: 40px
+
+	.main_stock_wrap, .main_news_wrap 
+		margin: 46px auto 0
+		.triangle
+			left: -110px
+		.decor_circles_wrap
+			left: 24px
+
+	.main_stock_descr, .main_news_descr  
+		h3
+			margin: 8px 0
+			font-size: 22px
+		.sub_des 
+			font-size: 12px
+			line-height: 2
+
+	.s_stock .decor_circles_wrap
+		display: none
+
+	.all_stock, .all_news 
+		.triangle
+			left: -65px
+		.after_img
+			padding: 20px 14px 10px 	
+
+		/*** STOCK PAGE OPEN ***/ 
+
+	.s_stock_open
+		padding: 0 10px
+		.rect
+			display: none
+
+	.info_news_wrap 
+		padding-top: 30px
+		.owl_nav
+			width: 98%
+		.decor_circles_wrap
+			left: -19px
+		.date_news
+			display: none
+		.decor_circles
+			display: none
+		.triangle 
+			top: -125px
+			left: -140px
+		.owl_nav
+			top: 600px
+		.curr_slide
+			margin: 40px 0
+		.new_descr
+			max-width: 680px
+			p
+				font-size: 14px
+			h2
+				line-height: 1.2
+				margin: 15px 0 30px 0
+
+	.slider_news 
+		.slide 
+			.img_wr 
+				height: 450px
+				img
+					box-shadow: none
+
+	/*** NEWS PAGE ***/
+
+	.main_news_descr
+		margin: 0
+		padding-left: 0
+		h3
+			font-size: 18px
+			margin-top: 10px
+		.sub_des
+			line-height: 1.8
+		.date
+			font-size: 12px
+
+	.s_news
+		.decor_circles_wrap
+			display: block
+		.rect
+			width: 825px
+			top: -155px
+			right: -647px
+		.circles_wrap
+			display: none
+
+	/*** NEWS PAGE ***/
+
+	.nav_wrap
+		width: 96%
+		margin: 70px auto 10px
+		.nav 
+			.nav_titles
+				width: 43%
+				font-size: 14px
+				li.active::after
+					bottom: -3px
+					height: 5px
+			.line
+				width: 36% 
+			h3
+				font-size: 24px
+
+	.all_news 
+		padding-bottom: 259px
+		.triangle
+			left: -12px
+			bottom: -215px
+		.rect
+			right: 598px
+			top: 1818px
+			width: 600px
+
+	.s_news 
+		.nav_bottom_wrap
+			bottom: 113px
+
+	.hod_stroyki_wrap 
+		margin: 80px auto 200px
+		h3
+			margin-bottom: 30px
+		.slider_all 
+			.slide 
+				padding: 10px
+				img
+					box-shadow: 0 0 47px -4px rgba(0,0,0,.1)
+		.decor_circles_wrap
+			display: none
+		.owl_nav 
+			width: 90%
+			top: 95px
+		.rect
+			display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-device-width: 768px) and (min-device-width: 570px)
+	.hide_menu
+		display: none
+	.header_nav 
+		li
+			font-size: 13px
+			line-height: 15px
+			// margin-right: 10px
+			.hide_p
+				display: none
+		li:not(:last-child)
+			margin-right: 15px
+		.nav_cnt
+			top: 5px
+
+	.phone_warp
+		top: 0px
+		.phone_icon
+			margin-left: 12px
+		.phone_icon
+			top: -13px
+			&::after
+				left: -7px
+				width: 50px
+				height: 50px
+			img
+				left: -5px
+				width: 28px
+				height: 28px
+
+	.main_sales
+		top: 80px
+		.sales_content 
+			padding: 0
+			margin: 0
+			h3
+				font-size: 18px
+				img
+					width: 20px
+			p
+				margin-top: 10px
+				font-size: 14px
+			.button
+				margin-top: 0
+	
+	.decorative
+		right: -170px
+		top: -120px
+
+	.main-slider 
+		.slide-txt
+			line-height: 1.7
+			margin-top: 25px
+			font-size: 24px
+		.slide-all
+			top: 46%
+			margin-left: 15px
+		.slick-next
+			height: 65px
+			width: 65px
+			top: 64%
+			left: 85%
+		.slick-dots 
+			button
+				font-size: 14px
+
+	.circle
+		top: 45%
+		left: 92%
+
+	.dec_fig2 
+		left: 91%
+		top: 55%
+		img
+			width: 30px
+			height: 25px
+
+	.dec_fig 
+		img
+			width: 22px
+			height: 14px		
+		left: 87%
+		top: 50%
+
+	.main_foot
+		max-width: 200px
+		transform: translateX(-53%)
+
+	.menu_mob
+		display: none
+
+	/*** PAGE ABOUT ***/ 
+	.s_prog_title
+		min-height: 830px
+
+	.prog_title
+		padding: 20px
+		top: 0
+		text-align: center
+		.title_wrap 
+			h2
+				font-size: 30px
+				margin: 50px 0 30px 0
+		.img_wrap
+			margin: 17px auto 0
+		.img_wrap_all
+			.rectang
+				width: 400px
+			.triangle
+				width: 150px
+				bottom: -38px
+				left: 65px
+			.circles_wrap
+				top: 256px
+				left: 56px
+			.circle_alone
+				top: 20px
+				right: 75px
+
+	.slide_medium 
+		.img_container 
+			img
+				height: 234px
+
+	.s_prog_about
+		min-height: 1000px
+
+	.circles_descr 
+		.item 
+			text-align: center
+			p
+				margin-top: 30px
+				line-height: 1.5
+			.itm_circle
+				width: 100px
+				height: 100px
+				span
+					font-size: 30px
+				.plan 
+					top: 19px
+					left: 19px
+					p
+						text-align: left
+						font-size: 20px
+						margin-left: 14px
+					.ot, .do
+						font-size: 10px
+					.ot
+						top: 17px
+					.do
+						top: 49px
+
+	.triger_flats_wrap
+		display: block
+		margin-top: 30px
+		font-size: 18px
+		// width: 100%
+		text-align: center
+		@include introBoldAlt()
+		.triger_flats
+			display: inline-block
+			padding: 5px 10px
+			background-color: #f1f2f9
+			border-radius: 50px
+			.triger_1, .triger_2
+				display: inline-block
+			.triger_1 
+				margin-right: 20px
+			.active_trig
+				padding: 5px 15px
+				border-radius: 30px
+				color: $lightOrange
+				background-color: #fff
+
+	.flat_all, .flat_simple
+		transition: all .5s ease
+		position: absolute
+		z-index: 20
+	.flat_all
+		transform: scale(0.9)
+		top: -50px
+	.flat_simple
+		z-index: 21
+
+	.s_getflat
+		padding-top: 90px
+		min-height: 1224px
+		.flat_examples .circles_wrap
+			display: none
+		.decor_circles_wrap
+			display: none
+	.flat_examples 
+		.triangle
+			bottom: -130px
+			left: 61px
+		.rectang
+			top: 465px
+			right: -50px
+
+	/** MAIN PLAN*/
+
+	.frst_rad, .scnd_rad
+		flex-direction: column 
+
+	/*PLANIROVKA*/
+
+	.s_flat 
+		min-height: 2635px 
+
+
+// @media screen and (max-device-width: 570px) 
+// 	.frst_rad, .scnd_rad
+// 		flex-direction: column 
+
+
+@media screen and (max-device-width: 768px) and (min-device-width: 320px)
+	.menu_mob
+		display: block
+		font-size: 20px
+		@include montMd()
+
+	.header
+		.logo
+			width: 120px
+	.hide_menu
+		display: none
+	.header_nav 
+		li
+			font-size: 13px
+			line-height: 15px
+			// margin-right: 10px
+			.hide_p
+				display: none
+		li:not(:last-child)
+			margin-right: 15px
+		.nav_cnt
+			justify-content: flex-end
+			top: 5px
+			.menu_mob
+				font-size: 16px
+				@include montBold()
+		.mnu_toggle 
+			.menu_point
+				width: 9px
+				height: 9px
+
+	.phone_warp
+		top: 0px
+		.phone_icon
+			margin-left: 12px
+		.phone_icon
+			top: -13px
+			&::after
+				left: -7px
+				width: 50px
+				height: 50px
+			img
+				left: -5px
+				width: 28px
+				height: 28px
+
+	.main_sales
+		top: 80px
+		.sales_content 
+			padding: 0
+			margin: 0
+			display: flex
+			h3
+				position: relative
+				top: 10px
+				display: flex
+				font-size: 18px
+				img
+					top: -62px
+			p
+				display: none
+			.button
+				margin-top: 0
+			.for_but
+				text-align: right
+	
+	.decorative
+		right: -398px
+		top: -294px
+
+	.main-slider 
+		.slide-title
+			font-size: 16px
+			&::after
+				bottom: -11px
+				height: 9px
+		.slide-txt
+			line-height: 1.7
+			margin-top: 15px
+			font-size: 14px
+		.slick-dots
+			transform: translateX(0)
+			button
+				&::after
+					width: 10px
+					height: 10px
+		.slide-all
+			top: 40%
+			margin-left: 5px
+		.slick-next
+			height: 45px
+			width: 45px
+			top: 74%
+			left: 76%
+			&::before
+				width: 20px
+				height: 10px
+				top: calc(50% - 5px)
+	.circle
+		display: none
+
+	.dec_fig2 
+		left: 89%
+		top: 62%
+		img
+			width: 20px
+			height: 18px
+
+	.dec_fig 
+		img
+			width: 15px
+			height: 10px	
+		left: 83%
+		top: 54%
+
+	.main_foot
+		display: none
+
+	/** PAGE ABOUT **/
+
+	.s_prog_title
+		text-align: center
+		min-height: 853px
+	.prog_title
+		padding: 0
+		top: 20px 	
+		.title_wrap
+			h2
+				font-size: 24px
+				margin: 30px 0
+			p
+				font-size: 13px
+		.img_wrap
+			margin: 20px auto 0
+			height: 190px
+		.img_wrap_all 
+			.rectang 
+				top: -100px
+				right: -122px
+				width: 300px
+				height: 200px
+			.triangle
+				width: 150px
+				bottom: -60px
+				left: -60px
+			.circle_alone
+				bottom: -33px
+
+	.s_prog_about
+		min-height: 600px
+		.owl_nav
+			top: 100%
+			.slide_next
+				right: 35%
+			.slide_prev
+				left: 35%
+
+	.gery_sect_decor
+		top: -80px
+		background-size: cover
+	.circles_all
+		top: 35%
+
+	.s_accomplishment
+		min-height: 1600px
+		padding-top: 790px
+		.circles_wrap .wrap_for_circles
+			display: none
+
+	.slider_wrap
+		top: 893px
+		.dec_triangl
+			top: 360px
+
+	.circles_descr 
+		text-align: center
+		.item 
+			p
+				margin-top: 20px
+			margin-bottom: 30px
+			.itm_circle 
+				.plan 
+					p
+						text-align: left
+
+	.circles_descr 
+		.item 
+			text-align: center
+			p
+				margin-top: 30px
+				line-height: 1.5
+			.itm_circle
+				width: 100px
+				height: 100px
+				span
+					font-size: 30px
+				.plan 
+					top: 19px
+					left: 19px
+					p
+						text-align: left
+						font-size: 20px
+						margin-left: 14px
+					.ot, .do
+						font-size: 10px
+					.ot
+						top: 17px
+					.do
+						top: 49px
+
+	.triger_flats_wrap
+		display: block
+		margin-top: 30px
+		font-size: 18px
+		// width: 100%
+		text-align: center
+		@include introBoldAlt()
+		.triger_flats
+			display: inline-block
+			padding: 5px 10px
+			background-color: #f1f2f9
+			border-radius: 50px
+			.triger_1, .triger_2
+				display: inline-block
+			.triger_1 
+				margin-right: 20px
+			.active_trig
+				padding: 5px 15px
+				border-radius: 30px
+				color: $lightOrange
+				background-color: #fff
+
+	.flat_all, .flat_simple
+		transition: all .5s ease
+		position: absolute
+		z-index: 20
+	.flat_all
+		transform: scale(0.9)
+		top: -50px
+	.flat_simple
+		z-index: 21
+
+	.s_getflat
+		padding-top: 90px
+		min-height: 1224px
+		.flat_examples .circles_wrap
+			display: none
+		.decor_circles_wrap
+			display: none
+	.flat_examples 
+		.triangle
+			bottom: -130px
+			left: 61px
+		.rectang
+			top: 465px
+			right: -50px
+
+	.flat_examples_wrap 
+		.flat_all, .flat_simple
+			padding: 20px 20px
+
+	.flat_examples 
+		.triangle
+			left: -70px
+		.rectang 
+			top: 432px
+			right: -252px
+
+	.pages_foot
+		min-height: 720px
+
+	.sicial_wrap 
+		img
+			width: 20px
+			height: 20px
+		a	
+			&::after
+				display: none
+			margin-right: 0
+			&:first-child
+				margin-right: 40px
+				padding: 0
+	.pages_foot 
+		.sicial_wrap 
+			a:first-child
+				padding: 0
+
+	.loc_wrap
+		justify-content: center
+
+	.scnd_row
+		margin-top: 30px
+
+	.comunicate
+		margin-top: 50px
+		h5
+			font-size: 18px
+		p
+			font-size: 14px
+		flex-direction: column
+		.phones, .location
+			text-align: center
+		.phones
+			margin-left: 0
+			display: flex
+			align-items: center
+			flex-direction: column
+			.separ
+				display: none
+			p
+				display: flex
+				flex-direction: column
+
+	.button_wrap
+		text-align: center
+
+	.scnd_foot_wrap
+		p
+			line-height: 1.2
+		.wsf
+			text-align: left
+			margin-top: 10px
+			font-size: 15px
+
+	/** MAIN PLAIN **/
+
+	.top_bl_wrap 
+		top: 0
+		.top_bl
+			padding: 40px 20px 0
+			border-top: none
+			border-left: none
+			border-right: none 
+			.triangle_dec
+				display: none
+
+	.flats_links
+		flex-direction: column
+	.flats_row1
+		margin-bottom: 0px
+		position: relative
+
+	.flats_row1, .flats_row2
+		flex-direction: column
+
+	.flat_link
+		display: flex
+		justify-content: space-between
+		padding: 18px 0 18px 20px
+		border-left: none
+		border-bottom: 3px solid #fff
+		img
+			top: 46px
+			width: 11px
+		h5
+			font-size: 18px
+			width: 160px
+		p
+			margin: 0
+			margin-right: 10px
+
+	.plan_title
+		font-size: 30px
+		line-height: 1.3
+		margin-top: 50px
+	.after_title
+		font-size: 16px
+
+	.flats_links
+		margin-top: 50px 
+
+	.flats_row2
+		.flat_link:last-child
+			margin-bottom: 20px
+
+	.s_planmain 
+		min-height: 1532px
+		.rectangle, .decor_circles_wrap
+			display: none
+
+	.metr_square
+		margin-top: 50px
+		.square:first-child
+			margin-right: 0
+		input
+			margin-left: 0
+			margin-right: 5px
+			max-width: 80px
+	.radio_wrap, .metr_square
+		justify-content: center
+	.budget 
+		.f_lab
+			margin-bottom: 30px
+			justify-content: center
+		label
+			justify-content: center
+
+	.form_container 
+		.scnd_row
+			margin-top: 30px
+
+	.need1, .need2
+		font-size: 16px
+		margin-top: 25px
+
+	.frst_rad, .scnd_rad
+		flex-direction: column 
+
+	.radio_wrap 
+		.radio:not(:last-child)
+			margin-bottom: 20px
+
+	.budget label, .metr_square label
+		font-size: 16px
+
+	.budget
+		input
+			max-width: 170px
+
+	.bottom_form_wrap
+		margin-top: 45px
+
+	.select_title
+		margin-bottom: 60px
+
+	/***** PLANIROVKI ALL ******/ 
+
+	.button_all
+		flex-direction: column
+		li
+			max-width: 100%
+			margin-bottom: 20px
+			&.links_two
+				max-width: 100%
+
+	.titles_room
+		h4
+		 text-align: center
+
+	.filter_square
+		margin: auto
+
+	.reb_wrap
+		margin-top: 20px
+		flex-direction: column
+		justify-content: center
+		align-items: center
+	.reset
+		margin: 0
+		order: 2
+	.wrap_but
+		order: 1
+
+	.img_wrap
+		padding: 51px 11px 30px 11px
+
+	.selectize-control
+		width: 134px
+
+	.s_plans 
+		.circles_wrap
+			display: none
+		.triang
+			display: none
+
+	/*** PLANIROVKA ***/
+
+	.flat_items 
+		.l_bl, .r_bl
+			flex-direction: column 
+
+	.s_flat
+		min-height: 2350px
+		.flat
+			margin: 0
+			padding: 40px 10px
+
+	.slider_flat_wrap
+		top: 1400px 
+		.slider_title
+			font-size: 24px
+			text-align: center
+		.owl_nav 
+			top: 120%
+			.slide_prev, .slide_next
+				img
+					top: -2px
+					left: 1px
+			.slide_prev
+				left: 30%
+			.slide_next
+				right: 30%
+
+	.flat_title 
+		.fl_next 
+			.img_span 
+				left: 20px
+				top: -12px
+
+	.slider_flat_wrap 
+		.triang
+			display: none
+		.circles_wrap
+			display: none
+	
+	.flat_title 
+		h3
+			margin-top: 20px
+			font-size: 24px
+		.fl_next, .fl_prev
+			top: 0
+
+	.flat_descr
+		margin: 50px 0 0 0
+
+	.wrap_resp 
+		.square_flat
+			flex-direction: column
+			align-items: center
+			.frst_sq
+				margin: 0 0 20px 0
+	.mail_consult
+		margin-top: 50px
+
+	.slider_flats
+		padding-top: 15px
+
+		/** CONDITION PAGE **/ 
+
+	.list_rules 
+		.list_wrap
+			padding: 40px 50px
+
+	.cond_title
+		display: none
+	.cond_title_add
+		font-size: 33px
+		margin-top: 50px
+		line-height: 40px
+
+	.list_wrap 
+		flex-direction: column
+		.circles_wrap
+			display: none
+
+	.list 
+		display: flex
+		flex-direction: column
+		align-items: center
+		// justify-content: center
+		margin-top: 20px
+		.lst_img
+			max-width: 90px
+		p
+			// margin-left: 50px
+			font-size: 14px
+
+	.doc_type
+		font-size: 18px
+		line-height: 20px
+	.aft_doc
+		font-size: 14px
+
+	.flat_descr
+		margin: 5px 0 16px 0
+
+	.cond_slider 
+		.slide 
+			.img
+				max-width: 700px
+		.descr
+			flex-direction: column
+			margin: 19px 0 16px 0
+
+	.quotes_wrap 
+		max-width: 210px
+		padding-bottom: 78px
+		.qotes_title
+			padding-left: 0
+			margin-top: 110px
+			font-size: 18px
+			line-height: 30px
+			&::after
+				left: -41px
+				top: 80px
+
+	.cond_slider_wrap 
+		margin-bottom: 113px
+		.rectang
+			top: -28px
+			right: -209px
+		.triangle
+			left: -86px
+		.owl_nav
+			top: 92%
+			.slide_next
+				right: 30%
+			.slide_prev
+				left: 30%
+
+	/** CONTACT PAGE **/
+
+	.map_block 
+		padding-top: 100%
+		.rectang, .circles_wrap
+			display: none 
+
+	.contacts_info
+		flex-direction: column
+		.loc_descr
+			flex-direction: column
+			margin-left: 0
+			margin-top: 30px
+		.bot_info
+			align-items: flex-start
+
+	.phone_info
+		.phones
+			flex-direction: column
+			align-items: flex-start
+			span
+				display: none
+		.hide_d
+			font-size: 24px
+
+	.schedule_info 
+		.schedule
+			flex-direction: column
+			.bold
+				margin-bottom: 0px
+				font-size: 18px
+			.work_d
+				margin-bottom: 10px
+
+	.cont_but
+		text-align: center
+
+	.map_block_wrap
+		margin-top: 50px
+		&::after
+			background-image: url(../img/contacts/so_smallmap.png)
+			max-width: 100%
+			height: 400px
+			background-size: 100%
+
+	.contact_form 
+		.circles_wrap, .rectangle, .triangle
+			display: none
+		.cont_call
+			width: 80%
+
+	.s_contacts
+		padding: 40px 0 100px 0
+
+
+	/*** SMART PAGE ****/ 
+
+	.s_smart 
+		.smart_title
+			font-size: 24px
+			line-height: 34px
+			padding: 0 35px
+			margin: 50px 0 40px 0
+	.tabel 
+		.tabel_title
+			font-size: 14px
+			padding: 20px 30px
+		.table_cols
+			display: none
+		.circles_wrap
+			display: none
+
+	.table_info 
+		.cus_row
+			display: none
+
+	.info_mobile	
+		display: block
+
+	.table_info2 
+		width: 98%
+		padding: 10px
+		ul 
+			li
+				font-size: 12px
+				line-height: 1.4
+				&:last-child
+					font-size: 14px
+
+	.table_info3
+		width: 98%
+		padding: 15px 10px
+
+	.about_smart
+		margin-top: 70px
+
+	.descr_l 
+		.decor_circles_wrap
+			display: none
+		.rectang
+			left: -100px
+			top: -143px
+			width: 220px
+		.par
+			line-height: 2.2
+
+	.parag_img
+		margin-bottom: 40px
+		height: 212px
+		border: 5px solid #fff
+
+	.cond_slider 
+		.descr
+			padding: 0
+			margin: 10px 0
+		.flat_descr
+			margin-right: 0
+		.frst_desc
+			font-size: 16px
+		.slide 
+			.img 
+				height: 270px
+				max-width: 600px
+				img
+					height: 270px
+
+	.cond_slider_wrap 
+		margin-bottom: 80px
+		.decor_circles_wrap2
+			display: none
+		.decor_circles_wrap1
+			bottom: -75px
+			left: 93px
+			transform: rotate(-100deg)
+
+	/***** STOCK PAGE ******/
+
+	.main_stock_wrap, .main_news_wrap
+		padding: 15px 0
+		.triangle
+			display: none
+	.s_stock, .s_news  
+		.rect
+			display: none 
+
+	.all_stock, .all_news 
+		.after_img
+			padding: 20px 5px 10px
+		h3
+			font-size: 22px
+			line-height: 1.4
+		p
+			line-height: 1.8
+
+	.main_stock_wrap, .main_news_wrap 
+		margin: 25px auto 0
+	.stock_title, .news_title 
+		margin-top: 25px
+
+	.main_stock_descr, .main_news_descr 
+		text-align: center
+		.date
+			margin-top: 20px
+		.sub_des
+			margin: 0 auto 40px
+			line-height: 2
+		h3
+			font-size: 26px
+			color: #202020
+			margin: 20px 0
+		.more
+			left: 50%
+			transform: translateX(-50%)
+
+	/** STOCK OPEN PAGE ***/ 
+
+	.s_stock_open 
+		.rect
+			display: none
+		.top_title 
+			.container 
+				h2
+					font-size: 24px
+					margin-top: -80px
+				a
+					font-size: 13px
+				.prev_block img, .next_block img 
+					width: 13px
+					height: 8px
+				.prev_block img
+					margin-right: 10px
+				.next_block img
+					margin-left: 10px
+
+
+	.info_news_wrap
+		margin: 38px auto 200px
+		padding-top: 10px
+		.triangle
+			display: none
+		.owl_nav
+			width: 98%
+			top: 375px
+		.decor_circles_wrap
+			left: -19px
+		.date_news
+			display: none
+		.decor_circles
+			display: none
+		.curr_slide
+			margin: 40px 0
+		.new_descr
+			max-width: 680px
+			padding: 0 10px
+			p
+				font-size: 12px
+			h2
+				line-height: 1.2
+				font-size: 22px
+				margin: 15px 0 30px 0
+
+	.slider_news 
+		.slide 
+			.img_wr 
+				height: 250px
+				img
+					box-shadow: none
+
+	/*** NEWS PAGE ***/ 
+
+	.main_news_descr
+		padding-left: 0
+		h3
+			font-size: 21px
+			line-height: 1.4
+
+	.s_news 
+		.circles_wrap
+			display: none
+		.nav_bottom_wrap
+			bottom: 76px
+
+	.nav_wrap 
+		width: 89%
+		margin: 70px auto 20px
+		.nav
+			justify-content: flex-start
+			flex-direction: column
+			align-items: flex-start
+			.nav_titles
+				position: relative
+				margin-top: 20px
+				margin-bottom: 30px
+				width: 100%
+				justify-content: flex-start
+				li.active::after
+					bottom: -3px
+					height: 5px
+				li
+					&:first-child
+						margin-right: 30px
+					&:last-child
+						position: absolute
+						top: 50px
+			.line
+				width: 100%
+
+	.all_news 
+		padding-bottom: 186px
+		.triangle
+			display: none
+
+	.hod_stroyki_wrap 
+		margin: 0px auto 230px
+		h3
+			margin-bottom: 10px
+			font-size: 18px
+		.slider_all 
+			.slide 
+				height: 210px
+				padding: 10px
+				img
+					box-shadow: 0 0 47px -4px rgba(0,0,0,.1)
+				.build_date
+					bottom: 33px
+					padding: 3px 5px
+					font-size: 8px
+		.decor_circles_wrap
+			display: none
+		.owl_nav 
+			width: 52%
+			top: 357px
+		.rect
+			display: none
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ≥1200px
++media-breakpoint-down(lg)
+
+	
+// ≥992px
++media-breakpoint-down(md)
+	
+	
+// ≥768px
++media-breakpoint-down(sm)
+
+	
+// ≥576px
++media-breakpoint-down(xs)
+
+	
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
