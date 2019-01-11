@@ -814,10 +814,14 @@ section
  
 
 .s_prog_about
-	min-height: 1350px
+	min-height: 1116px
 	position: relative
 	color: #fff
 	top: 100px
+	.orange_triangle
+		position: absolute
+		top: 48%
+		right: 10%
 	.prog_title
 		@include introBoldAlt()
 		font-size: 30px
@@ -843,6 +847,9 @@ section
 		left: 50%
 		transform: translateX(-50%)
 		top: 150px
+
+	.owl_nav
+		display: none
 
 	.slick-slide 
 		img
@@ -889,6 +896,7 @@ section
 	.slide_prev, .slide_next
 		cursor: pointer
 		position: absolute
+		z-index: 20
 		top: 0
 		width: 45px
 		height: 45px
@@ -1822,14 +1830,14 @@ section
 	position: relative
 	top: 52px
 
-.item
-	box-shadow: 0 0 69px -10px rgba(0,0,0,.1)
-	border: 5px solid #fff
-	transition: all .5s ease
-	margin-bottom: 30px
-	&:hover
-		border-color: $lightOrange
-		box-shadow: 0 8px 65px -7px rgba(249,123,45,.3)
+	.item
+		box-shadow: 0 0 69px -10px rgba(0,0,0,.1)
+		border: 5px solid #fff
+		transition: all .5s ease
+		margin-bottom: 30px
+		&:hover
+			border-color: $lightOrange
+			box-shadow: 0 8px 65px -7px rgba(249,123,45,.3)
 
 .s_plans
 	position: relative
@@ -3582,7 +3590,6 @@ section
 	position: relative
 	top: 100px
 	z-index: 5
-	min-height: 3000px
 
 .sect_descr
 	max-width: 1440px
@@ -3647,6 +3654,7 @@ section
 			bottom: -50px
 			right: -100px
 		.decor_circles_wrap
+			position: absolute
 			z-index: -1
 			right: -50px
 			transform: scale(-1, -1)
@@ -3707,7 +3715,46 @@ section
 			font-size: 14px
 
 .design_ready
+	margin-bottom: 250px
+	margin-top: 100px
+	max-width: 1440px
+	width: 100%
+	position: relative
+	left: 50%
+	transform: translateX(-50%)
+	.ready_img
+		position: relative
+		.triangle
+			position: absolute
+			left: -85px
+			bottom: -30px
+		.decor_circles_wrap
+			z-index: 0
+			bottom: 13px
+			transform: rotate(-51deg)
+			left: -88px
+		.sec_circ
+			bottom: 104%
+			left: 96%
+			transform: rotate(83deg)
+		.rectang
+			position: absolute
+			top: -62px
+			right: -117px
 	h3
+		margin-bottom: 80px
+		font-size: 30px
+		@include introBoldAlt()
+
+	.done_flat
+		margin-bottom: 30px
+		img
+			border: 10px solid #fff
+			max-width: 430px
+			width: 100%
+			height: auto
+			display: block
+			box-shadow: 0 0 33px 4px rgba(0,0,0,.1)
 
 
 
