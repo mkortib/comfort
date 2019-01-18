@@ -335,7 +335,7 @@ body
 	.header
 		max-width: 1440px
 		position: absolute
-		top: 23px
+		top: 25px
 		left: 50%
 		transform: translate(-50%)
 		width: 100%
@@ -357,6 +357,7 @@ body
 			margin-right: 20px
 		a
 			color: #fff
+			text-decoration: none
 	.mnu_toggle
 		outline: none
 		display: flex
@@ -516,7 +517,7 @@ body
 			li 
 				display: inline-block
 				vertical-align: bottom
-				margin: 0 20px
+				padding: 0 20px
 
 			button 
 				position: relative
@@ -537,6 +538,9 @@ body
 					position: relative
 					left: 4px
 					top: 8px
+				
+				&::before
+					display: none
 
 			.slick-active 
 				button 
@@ -582,6 +586,7 @@ body
 				width: 100%
 				background: url(../img/svg/wave-line.svg) 0 no-repeat
 				background-size: cover
+				animation: wave 2s linear infinite
 
 		&-txt 
 
@@ -3757,6 +3762,332 @@ section
 			box-shadow: 0 0 33px 4px rgba(0,0,0,.1)
 
 
+/***** ADVANTAGES PAGE *******/
+
+.s_outside
+	position: relative
+	color: #fff
+	top: 100px
+	z-index: 6
+	color: $text
+	padding-top: 100px
+	padding-bottom: 150px
+	h2
+		@include introBoldAlt()
+		font-size: 36px
+		text-align: center
+	h3
+		@include introBoldAlt()
+		font-size: 24px
+		text-align: center
+
+
+.slider_adv1
+	margin-top: 65px
+	
+.slide_adv1
+	position: relative
+	background-color: #fff
+	box-shadow: 0 16px 30px rgba(0,0,0,.1)
+	@include montMd()
+	transition: all .5s ease
+	top: 0
+	cursor: pointer
+	&:hover
+		top: -10px
+		box-shadow: 0 16px 30px rgba($lightOrange,.3)
+	img
+		// border-radius: 10px 10px 0px 0px
+		max-width: 100%
+		height: 330px
+	.ilus
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-bottom: 25px
+		svg
+			width: 12px
+			height: auto
+			fill: $silver
+		.group
+			width: 18px
+		span
+			@include montSemBold()
+			font-size: 14px
+			color: $silver
+			margin-left: 10px
+	p
+		color: $text
+		font-size: 16px
+		text-align: center
+		margin-top: 20px
+
+.wr_adv1
+	position: relative
+	.slick-slide
+		padding-bottom: 32px
+		padding-top: 10px
+	.owl_nav
+		top: 105%
+		p
+			text-align: center
+			margin: 0
+			position: relative
+			top: 10px
+			@include introBoldAlt()
+	.slide_prev, .slide_next
+		top: 0
+	.slide_next
+		right: 43% 
+	.slide_prev
+		left: 43%
+	.rect
+		position: absolute
+		z-index: -1
+		left: -63px
+		top: -43px
+		opacity: .1
+		width: 200px
+	.circles_wrap
+		position: absolute
+		z-index: -1
+		top: -52px
+		transform: scale(1, -1)
+		left: 47px
+		.wrap_for_circles 
+			.circle_around
+				&:nth-child(2)
+					left: 54px
+				&:nth-child(1)
+					right: 8px
+					top: 56px
+				&:nth-child(3)
+					left: 27px
+					top: 26px
+	.triangle
+		position: absolute
+		z-index: -1
+		bottom: -13px
+		right: -60px
+	.decor_circles_wrap
+		position: absolute
+		z-index: -1
+		right: -50px
+		transform: scale(-1, -1)
+		bottom: -50px
+
+
+.s_infra
+	position: relative
+	margin-top: 100px
+	padding-top: 70px
+	z-index: 7
+	padding-bottom: 200px
+	.triangle
+		position: absolute
+		top: 44%
+		left: 20%
+		// z-index: -1
+	.rectang
+		position: absolute
+		bottom: 0
+		left: 0
+	.circles_wrap
+		transform: rotate(288deg)
+		left: 10%
+		top: 28%
+		position: absolute
+		.wrap_for_circles 
+			.circle_around:nth-child(2)
+				left: 36px
+				bottom: -11px
+			.circle_around:nth-child(3)
+				left: -28px
+				top: -2px
+	.decor_svg1
+		position: absolute
+		top: 0
+		background-image: url(../img/advantages/SVG/decor.svg)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		width: 100%
+		height: 70px
+		position: absolute
+		z-index: 8
+	.decor_svg2
+		position: absolute
+		bottom: 0
+		background-image: url(../img/advantages/SVG/decor2.svg)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		width: 100%
+		height: 70px
+		position: absolute
+		z-index: 8
+	h2
+		font-size: 30px
+		@include introBoldAlt()
+		text-align: center
+		margin-top: 50px
+
+
+.infra_items
+	margin-top: 80px
+	.ifra_row
+		margin-top: 40px
+
+.ifr_item
+	position: relative
+	@include shadow()
+	background-color: #fff
+	padding: 10px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	img
+		max-width: 100%
+		display: block
+		height: auto
+		box-shadow: 0 15px 20px rgba(0,0,0,.1)
+	.triangle
+		left: 260px
+		top: 270px
+		z-index: -1
+		box-shadow: none
+	p
+		font-size: 16px
+		@include introBoldAlt()
+		margin: 20px 0 10px 
+
+
+
+
+.s_teritory
+	position: relative
+	padding-bottom: 300px
+	.slick-slider 
+		position: relative
+		z-index: 2
+		.slick-track
+			padding: 40px 0
+			display: flex
+			justify-content: space-between
+	.slick-arrow.slick-hidden
+		display: block
+	.slick-slide 
+		display: flex
+		margin: 0 10px
+		// padding: 40px 40px
+	.slick-list 
+		margin: 0 -10px
+				// padding: 20px 0 40px 0
+	// .slick-slide 
+	// 	padding: 0 10px 
+	// .slick-list 
+	// 	padding: 0 -10px
+	h2
+		font-size: 30px
+		@include introBoldAlt()
+		text-align: center
+		margin-top: 100px
+		
+.teritoty_wr
+	margin-top: 50px
+
+.ter_slide
+	// width: 48%
+	position: relative
+	z-index: 2
+	background-color: #fff
+	padding: 30px 30px 50px
+	box-shadow: 0 10px 25px 1px rgba(0,0,0,.1)
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	border-radius: 10px
+	// &:first-child
+	// 	margin-right: 4%
+	svg
+		position: absolute
+		top: 0
+		left: 0
+	img
+		max-width: 100%
+		position: relative
+		z-index: 2
+		display: block
+		height: auto
+		box-shadow: 0 20px 32px rgba(0,0,0,.1)
+	.dec_car
+		position: absolute
+		top: 0
+		left: 0
+		box-shadow: none
+		z-index: 1
+	.dec_car2
+		position: absolute
+		top: 0
+		right: 0
+		box-shadow: none
+		z-index: 1
+	.ter_descr
+		margin-top: 40px
+		text-align: center
+		max-width: 390px
+		@include montMd()
+		font-size: 16px
+
+
+.teritory_slider
+
+
+.ter_slide_wr
+	display: flex
+	justify-content: space-between
+	// width: 100%
+
+
+.ter_wr
+	position: relative
+	.triangle, .rectang, .decor_circles_wrap, .circles_wrap
+		position: absolute
+		z-index: 0
+	.triangle
+		left: 20px
+		bottom: 14px
+	.decor_circles_wrap
+		bottom: 64px
+		left: 20px
+		transform: scale(-1, 1)
+	.rectang
+		right: -20px
+		top: -26px
+	.circles_wrap
+		right: -5px
+		top: 24px
+	.owl_nav
+		top: 102%
+	.slide_prev, .slide_next
+		top: 0
+	.slide_next
+		right: 45% 
+	.slide_prev
+		left: 45%
+
+.s_adv
+	padding-top: 245px
+	min-height: 0
+	.gery_sect_decor
+		background-image: url(../img/advantages/decor_bot.png)
+
+			
+
+
 
 
 		
@@ -3765,6 +4096,181 @@ section
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORM CALL */
+
+.form_call
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	h2
+		color: $text
+		@include montBold()
+		font-size: 30px
+		text-align: center
+		position: relative
+		z-index: 2
+		margin-bottom: 30px
+
+		&::after
+			z-index: -1
+			content: 'Comfort'
+			@include introBoldAlt()
+			color: $lightOrange
+			font-size: 120px
+			letter-spacing: 4px
+			left: -150px
+			top: 80px
+			transform: rotate(45deg)
+			text-transform: uppercase
+			position: absolute
+			text-shadow: 5px 5px 0 $blue, 10px 10px rgba(0, 0, 0, .1)
+			opacity: 0.1
+
+	.orange_button
+		position: relative
+		z-index: 2
+		font-size: 18px
+		margin-top: 20px
+
+	.input-container
+		position: relative
+		z-index: 2
+		padding: 20px 0 0px
+		text-align: center
+		margin-bottom: 10px
+		
+		label
+			font-weight: 500
+			
+			.label-text
+				color: $silver
+				cursor: text
+				@include montMd()
+				font-size: 18px
+				line-height: 20px
+				transform: translateY(-34px)
+				transition: all 0.3s
+				
+		input, textarea
+			background-color: transparent
+			border: 0
+			border-bottom: 2px solid $silver
+			color: $blue
+			font-size: 18px
+			@include montMd()
+			letter-spacing: -1px
+			outline: 0
+			padding: 5px 20px
+			text-align: center
+			transition: all 0.3s
+			width: 100%	
+			
+			&:focus 
+				border-bottom: 2px solid $lightOrange
+				color: $lightOrange
+
+				& + .label-text
+					color: $lightOrange
+					font-size: 13px
+					transform: translateY(-64px)
+				
+			&.value-exists + .label-text
+				font-size: 13px
+				transform: translateY(-64px)
+
+
+ 
+
+
+
+
+/* POPUP */
+
+.pop_call 
+	background: white
+	padding: 50px 30px
+	text-align: left
+	max-width: 600px
+	margin: 40px auto
+	position: relative
+	border-radius: 10px
+	button
+		.mfp-arrow, .mfp-close
+		
+	.mfp-close
+		font-size: 40px
+		color: $lightOrange
+		opacity: .7
+		transition: all .3s ease
+		&:hover
+			opacity: 1
+			// color: $lightOrange
+			// transform: scale(1.4)
+
+.my-mfp-slide-bottom .zoom-anim-dialog 
+	opacity: 0
+	-webkit-transition: all 0.2s ease-out
+	-moz-transition: all 0.2s ease-out
+	-o-transition: all 0.2s ease-out
+	transition: all 0.2s ease-out
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+
+
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog 
+	opacity: 1
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ) 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 )
+
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog 
+	opacity: 0
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ) 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg 
+	opacity: 0
+
+	-webkit-transition: opacity 0.3s ease-out 
+	-moz-transition: opacity 0.3s ease-out 
+	-o-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg 
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg 
+	opacity: 0
 
 
 
@@ -3873,6 +4379,13 @@ section
 	to 
 		-webkit-transform: rotate(-15deg)
 		transform: rotate(-15deg)
+
+
+// @keyframes wave
+// 	from
+// 		background-position: 0 0
+// 	to
+// 		background-position: 40px 0
 
 /*** CUSTOM MMENU ****/
 

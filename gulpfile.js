@@ -50,6 +50,7 @@ gulp.task('js', function() {
 		'app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
 		'app/libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
 		'app/libs/plugins-scroll/plugins-scroll.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

@@ -47,13 +47,13 @@
 						<div class="col-lg-6 col-xl-7 col-md-6 col-sm-4 col-6">
 							<nav class="header_nav">
 								<ul class="nav_cnt">
-									<li class="menu_item"><a href="#">О проекте</a></li>
-									<li class="menu_item"><a href="#">Квартиры</a></li>
-									<li class="menu_item"><a href="#">Условия <span class="hide_p">покупки</span></a></li>
-									<li class="menu_item"><a href="#">Галерея</a></li>
-									<li class="menu_item"><a href="#">Акции</a></li>
-									<li class="menu_item"><a href="#">Новости</a></li>
-									<li class="menu_item"><a href="#">Контакты</a></li>
+									<li class="menu_item"><a href="about_project.html">О проекте</a></li>
+									<li class="menu_item"><a href="planirovki_main.html">Квартиры</a></li>
+									<li class="menu_item"><a href="buy_cond.html">Условия <span class="hide_p">покупки</span></a></li>
+									<li class="menu_item"><a href="smart.html">Галерея</a></li>
+									<li class="menu_item"><a href="stock.html">Акции</a></li>
+									<li class="menu_item"><a href="news.html">Новости</a></li>
+									<li class="menu_item"><a href="contact.html">Контакты</a></li>
 									<li class="menu_mob"><a href="#my-menu">МЕНЮ</a></li>
 									<a class="mnu_toggle" href="#my-menu">
 										<span class="menu_point"></span>
@@ -67,7 +67,7 @@
 						<div class="col-lg-4 col-xl-3 col-md-4 col-sm-5 d-none d-sm-block d-md-block d-lg-block d-xl-block">
 							<div class="phone_warp">
 								<div class="phone">+380 67 597 03 03</div>
-								<div class="phone_icon"><img src="img/svg/callback.svg" alt="телефон компании"></div>
+								<a class="phone_icon popup-with-move-anim" href="#small-dialog"><img src="img/svg/callback.svg" alt="телефон компании"></a>
 							</div>
 						</div>
 
@@ -79,13 +79,13 @@
 
 					<nav id="my-menu">
 						<ul class="dssd">
-							<li class="dsdd"><a href="#">О проекте</a></li>
-							<li class="fff"><a href="#">Квартиры</a></li>
-							<li class="fff"><a href="#">Условия покупки</span></a></li>
-							<li class="ff"><a href="#">Галерея</a></li>
-							<li class="fff"><a href="#">Акции</a></li>
-							<li class="fff"><a href="#">Новости</a></li>
-							<li class="fff"><a href="#">Контакты</a></li>
+							<li class="dsdd"><a href="about_project.html">О проекте</a></li>
+							<li class="fff"><a href="planirovki_main.html">Квартиры</a></li>
+							<li class="fff"><a href="buy_cond.html">Условия покупки</span></a></li>
+							<li class="ff"><a href="smart.html">Галерея</a></li>
+							<li class="fff"><a href="stock.html">Акции</a></li>
+							<li class="fff"><a href="news.html">Новости</a></li>
+							<li class="fff"><a href="contact.html">Контакты</a></li>
 						</ul>
 					</nav>
 
@@ -209,9 +209,33 @@
 
    </div>
 
+	<!-- POPUP FORMS -->
 	
-	
+	<div id="small-dialog" class="zoom-anim-dialog mfp-hide pop_call">
 
+		<form class="form_call">
+
+			<h2>Заказать звонок</h2>
+
+			<div class="input-container">
+				<label>
+					<input type="text" name="name" required/>
+					<div class="label-text">Ваше имя</div>
+				</label>
+			</div>
+
+			<div class="input-container">
+				<label>
+					<input type="tel" name="phone" required/>
+					<div class="label-text">Номер телефона</div>
+				</label>
+			</div>
+
+			<button type="submit" class="orange_button">Заказать</button>
+
+		</form>
+
+	</div>
 	
 	
 
