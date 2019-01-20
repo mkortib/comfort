@@ -110,11 +110,12 @@
 								<div class="call_consult">
 									
 									<div class="img_consult">
-										<img src="img/planners/callback.png" alt="operator">
+										<div class="grad_class"></div>
+										<img src="img/svg/consult.svg" alt="operator">
 									</div>
 
 									<div class="img_descr">
-										<a href="planirovki_all.html" class="orange_button">Заказать консультацию</a>
+										<a href="planirovki_all.html" class="orange_button"><span class="grad_class"></span><span class="spm">Заказать консультацию</span></a>
 									</div>
 
 								</div>
@@ -258,13 +259,13 @@
 															<div class="square">
 																<label>
 	                                  Метраж от
-	                                  <input type="text">
+	                                  <input type="text" placeholder="26,6 м">
 	                              </label>
 															</div>
 															<div class="square">
 																<label>
 																		до
-	                                  <input type="text">
+	                                  <input type="text" placeholder="26,6 м">
 	                              </label>
 															</div>
 
@@ -284,7 +285,7 @@
 														<div class="budget">
 															<label class="f_lab">
 	                                Бюджет до
-	                                <input type="text">
+	                                <input type="text" placeholder="$130 000">
 	                             </label>
 														</div>
 
@@ -294,7 +295,7 @@
 														<div class="budget">
 															<label>
 	                                Ваш телефон
-	                                <input type="text">
+	                                <input type="tel" name="phone" placeholder="+3 80 (--) --- -- --" required>
 	                             </label>
 														</div>
 
@@ -307,9 +308,18 @@
 
 										</div>
 
-										<div class="but_wrap"><button class="orange_button">Заказать подбор квартиры</button></div>
+										<div class="but_wrap"><button class="orange_button" type="submit">Заказать подбор квартиры</button></div>
 
 									</form>
+
+									<!-- Hidden Block Call Request -->
+
+									<div class="succes_bl">
+
+										<h3>Спасибо за заявку!</h3>
+										<h4>Наш менеджер свяжется с вамм в ближайшее время</h4>
+
+									</div>
 
 								</div>
 

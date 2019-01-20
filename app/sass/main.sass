@@ -372,12 +372,50 @@ body
 			display: inline-block
 			vertical-align: middle
 
+	.drop
+		position: relative
+		display: flex
+		z-index: 10
+		align-items: center
+		.fas
+			position: relative
+			color: #fff
+			margin-left: 6px
+			font-size: 10px
+			transition: transform .3s ease
+		&:hover
+			.drop_down
+				display: block
+			.fas
+				transform: rotate(-180deg)
+			
+
+
+	.drop_hover
+		display: flex
+		align-items: center
+
+	.drop_down
+		display: none
+		position: absolute
+		top: 100%
+		left: 20%
+		min-width: 240px
+
+		li
+			margin: 5px 0 0 0
+			
+		
+		
+
 
 .phone_warp
 	position: relative
 	top: 10px
 	display: flex
 	.phone
+		color: #fff
+		text-decoration: none
 		@include montBold()
 		font-size: 16px
 	.phone_icon
@@ -401,6 +439,12 @@ body
 			left: -5px
 			width: 33px
 			height: 33px
+			transition: transform .2s ease
+
+		&:hover
+			img
+				animation: call 1s linear infinite
+
 
 .decorative
 	position: absolute
@@ -502,6 +546,13 @@ body
 				top: calc(50% - 7px)
 				left: calc(50% - 11px)
 				z-index: 1
+				transition: all .3s ease
+
+			&:hover
+
+				&::before 
+					transform: scale(1.1)
+
 
 		&-dots 
 			position: absolute
@@ -635,11 +686,13 @@ body
 
 .main_foot
 	position: absolute
-	max-width: 500px
+	// max-width: 500px
+	max-width: 1240px
 	width: 100%
 	bottom: 30px
 	z-index: 4
-	left: 20%
+	// left: 20%
+	left: 46%
 	transform: translateX(-50%)
 .sicial_wrap
 	display: flex
@@ -911,6 +964,7 @@ section
 			position: relative
 			top: 5px
 			left: 13px
+			width: 14px
 	.slide_prev
 		top: -90px
 		left: 20px
@@ -1307,6 +1361,9 @@ section
 	p
 		@include montMd()
 		font-size: 16px
+		a
+			color: #fff
+			text-decoration: none
 	.phones
 		margin-left: 65px
 
@@ -1337,7 +1394,7 @@ section
 			position: relative
 			left: 15px
 			top: 13px
-			width: 18px
+			width: 21px
 			height: 27px
 
 .button_wrap
@@ -1432,9 +1489,19 @@ section
 	justify-content: center
 	&:hover
 		.img_consult
-			background-color: $orange
+			.grad_class
+				opacity: 1
+				z-index: 1
 			&::before
 				background-color: $orange
+		.img_descr
+			.orange_button
+				.grad_class
+					border-radius: 40px
+					opacity: 1
+					z-index: 1
+
+
 
 
 .plan_title
@@ -1513,6 +1580,7 @@ section
 		transform: translate(-50%, -50%)
 		width: 34px
 		height: 34px
+		z-index: 4
 
 	&::after
 		width: 55px
@@ -1522,11 +1590,12 @@ section
 		border: 1px solid #fff
 		border-radius: 50%
 		right: 5px
+		z-index: 5
 
 	&::before
 		position: absolute
 		content: ''
-		width: 20px
+		width: 15px
 		height: 5px
 		background-color: $lightOrange
 		bottom: 25px
@@ -1536,6 +1605,16 @@ section
 .img_descr
 	.orange_button
 		padding: 17px 20px
+		.spm
+			position: relative
+			z-index: 2
+		&:hover
+			// background: none
+			.grad_class
+				border-radius: 40px
+				z-index: 1
+				opacity: 1
+			
 
 
 /*** RADIO CUSTOM ****/ 
@@ -1621,6 +1700,24 @@ section
 .bottom_form_wrap
 	margin-top: 200px
 
+	.succes_bl
+		display: none
+		text-align: center
+		max-width: 600px
+		width: 100%
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		@include grad-bg()
+		@include montBold()
+		padding: 50px 0
+		border-radius: 20px
+		@include orangeShad()
+
+		h3
+			font-size: 24px
+
+
 .select_title
 	color: $black
 	font-size: 30px
@@ -1678,6 +1775,7 @@ section
 
 .budget
 	label
+		align-items: center
 		display: flex
 		color: $black
 		@include introReg()
@@ -1701,6 +1799,7 @@ section
 		padding: 5px 0
 
 .form_select_flat
+	// display: none
 	.but_wrap
 		margin-top: 60px
 		text-align: center
@@ -1714,7 +1813,8 @@ section
 /********* PLANIROKI ALL *************/ 
 
 .s_planning
-	min-height: 300px
+	// min-height: 300px
+	padding-bottom: 80px
 	position: relative
 	top: 100px
 	z-index: 5
@@ -1751,6 +1851,7 @@ section
 		font-size: 14px
 		width: 100%
 		text-decoration: none
+		background: #fff
 		transition: all .3s ease
 		display: inline-block
 		@include shadow()
@@ -1765,8 +1866,30 @@ section
 	display: flex
 
 .selects
-	display: flex
-	justify-content: space-between
+
+	form
+		display: flex
+		flex-direction: column
+
+	.inp_t
+		display: flex
+		justify-content: space-between
+
+		input
+			max-width: 158px
+			width: 100%
+			outline: none
+			border: none
+			@include montMd()
+			font-size: 14px
+			padding: 12px 0
+			border-radius: 5px
+			@include shadow()
+			text-align: center
+			box-shadow: 0 8px 24px rgba(0,0,0,.1)
+
+	.wrapper
+		display: flex
 
 .selectize-control
 	width: 150px
@@ -1775,28 +1898,11 @@ section
 	max-width: 350px
 	width: 100%
 
-/**** SELCTIZE CUSTOM ****/
-
-.selectize-control.single .selectize-input:after
-	display: none 
-
-.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input
-	@include montMd()
-	font-size: 14px
-	color: $silver
-	width: 100%
-	text-align: center
-	box-shadow: 0 0 40px 0px rgba(0,0,0,.1)
-	box-shadow: 
-	border: none
-	outline: none
-	padding: 15px 0
-
-/*END*/
-
 .reb_wrap
+	position: absolute
+	top: 100px
+	left: -5px
 	display: flex
-	justify-content: flex-end
 
 .reset
 	margin-right: 30px
@@ -1819,7 +1925,11 @@ section
 
 .wrap_but
 	.orange_button
+		outline: none
+		border: none
 		padding: 20px 35px
+		box-shadow: 0 8px 23px rgba(249,123,45,.3)
+
 
 .butplusreb
 	margin-top: 40px
@@ -1840,6 +1950,8 @@ section
 		border: 5px solid #fff
 		transition: all .5s ease
 		margin-bottom: 30px
+		height: 
+
 		&:hover
 			border-color: $lightOrange
 			box-shadow: 0 8px 65px -7px rgba(249,123,45,.3)
@@ -1865,11 +1977,18 @@ section
 
 .img_wrap
 	background-color: #fff
-	padding: 54px 75px
+	// padding: 54px 75px
 	position: relative
+	height: 339px
+	a
+		display: flex
+		height: 100%
+		align-items: center
+		justify-content: center
 	img
-		width: 100%
-		max-height: 280px
+		max-width: 100%
+		display: block
+		height: auto
 		// height: 100%
 	span
 		position: absolute
@@ -2026,6 +2145,8 @@ section
 				position: absolute
 				top: 15px
 				left: 15px
+				width: 13px
+				// height: 9px
 	.fl_prev
 		left: 60px
 		.img_span
@@ -2083,6 +2204,7 @@ section
 		box-shadow: none
 		display: flex
 		margin-bottom: 35px
+		align-items: center
 	
 	.circle_fl
 		width: 80px
@@ -2105,8 +2227,9 @@ section
 		font-size: 16px
 		color: $silver
 		margin-left: 20px
+		margin-bottom: 0
 		position: relative
-		top: 20px
+		// top: 20px
 
 .square_flat	
 	display: flex
@@ -2171,7 +2294,7 @@ section
 	position: absolute
 	left: 50%
 	transform: translateX(-50%)
-	top: 1000px
+	top: 950px
 	.slider_title
 		@include introBoldAlt()
 		font-size: 30px
@@ -2200,7 +2323,7 @@ section
 	padding-top: 50px
 	margin: 0 20px
 	.item
-		// margin-right: 50px
+		box-shadow: 0 -3px 10px rgba(0,0,0,.1)
 	.slick-slide 
 		margin: 20px 15px
   
@@ -2315,7 +2438,7 @@ section
 	margin-top: 40px
 
 .cond_flats
-	top: 95px
+	top: 70px
 	position: relative
 	// min-height: 500px
 
@@ -2428,10 +2551,13 @@ section
 		background-color: #fff
 		box-shadow: 0 0 32px 2px rgba(0,0,0,.1)
 		.img
+			width: 100%
 			max-width: 415px
-			height: 300px
 			// box-shadow: 0 0 32px 0px rgba(0,0,0,.1)
 			img
+				max-width: 100%
+				display: block
+				height: 
 				width: 100%
 				height: 300px
 	.descr
@@ -2947,6 +3073,7 @@ section
 			position: absolute
 			right: 20px
 			top: 50%
+			width: 12px
 			z-index: 5
 			cursor: pointer
 	.add_info
@@ -3057,6 +3184,7 @@ section
 				position: relative
 				bottom: 2px
 				margin-left: 10px
+				width: 13px
 				transition: all .3s ease
 			&:hover
 				img
@@ -3138,9 +3266,9 @@ section
 		text-decoration: none
 		img
 			width: 14px
-			height: 9px
+			height: 14px
 			position: relative
-			top: 5px
+			top: 2px
 
 /**** STOCK OPEN PAGE ***/
 
@@ -3210,7 +3338,7 @@ section
 			.prev_block, .next_block
 				img
 					width: 15px
-					height: 10px
+					// height: 10px
 				a
 					display: flex
 					align-items: center
@@ -3841,6 +3969,7 @@ section
 		right: 43% 
 	.slide_prev
 		left: 43%
+		border-color: rgb(214, 216, 217)
 	.rect
 		position: absolute
 		z-index: -1
@@ -4341,6 +4470,20 @@ section
 		filter: opacity(1)
 		-webkit-transform: skewX(-25deg) scale(1)
 		transform: skewX(-25deg) scale(1)
+
+@keyframes call
+	0%
+		transform: rotate(0deg) scale(1)
+	20%
+		transform: rotate(-30deg) scale(1.1)
+	40%
+		transform: rotate(-20deg) scale(1.1)
+	60%
+		transform: rotate(-30deg) scale(1.1)
+	80%
+		transform: rotate(-20deg) scale(1.1)
+	100%
+		transform: rotate(0deg) scale(1)
 
 @-webkit-keyframes invalid 
 	0% 

@@ -158,8 +158,8 @@
 						<img src="img/about_project/triang_orang.png" class="orange_triangle d-none d-xl-block" alt="">
 						
 						<div class="owl_nav">
-							<div class="slide_prev arr_prev"><img src="img/about_project/left_arr.png" alt="arrow"></div>	
-							<div class="slide_next arr_next"><img src="img/about_project/arro_orange.png" alt="arrow"></div>	
+							<div class="slide_prev arr_prev"><img src="img/orr_arr_left.svg" alt="arrow"></div>	
+							<div class="slide_next arr_next"><img src="img/orr_arr_right.svg" alt="arrow"></div>	
 						</div>	
 
 						<div class="slider_detals">
@@ -598,8 +598,8 @@
 							<div class="dec_rectangl"><img src="img/about_project/rect_white.png" alt=""></div>	
 
 							<div class="owl_nav">
-								<div class="slide_prev" data-slide="2"><img src="img/about_project/left_arr.png" alt="arrow"></div>	
-								<p><span id="change_numb">3</span> / 5</p>
+								<div class="slide_prev" data-slide="2"><img src="img/hr_arr_l.svg alt="arrow"></div>	
+								<p><span id="change_numb">1</span> / <span id="all_sl">2</span></p>
 								<div class="slide_next" data-slide="3"><img src="img/about_project/arro_orange.png" alt="arrow"></div>	
 							</div>		
 
@@ -626,7 +626,7 @@
 									
 									<div class="row justify-content-center">
 										
-										<div class="col-xl-5 col-lg-5 offset-lg-1 col-md-8 col-11 col-sm-10">
+										<div class="col-xl-5 col-lg-5 col-md-8 col-11 col-sm-10">
 											<div class="flat_simple">
 												<h3>Вариант 1</h3>
 												<img src="img/about_project/simple_flat.png" alt="квартира">
@@ -635,7 +635,7 @@
 											</div>
 										</div>
 
-										<div class="col-xl-5 col-lg-5 offset-lg-0 col-md-8 col-11 col-sm-10">
+										<div class="col-xl-5 col-lg-5 col-md-8 col-11 col-sm-10">
 											<div class="flat_all">
 												<h3>Вариант 2</h3>
 												<img src="img/about_project/flat_all.png" alt="квартира">
@@ -727,7 +727,7 @@
 								
 								<div class="col-xl-1 col-lg-1 col-md-2 col-12">
 									<div class="loc_wrap">
-										<div class="loc_icon"><img src="img/about_project/loc.png" alt="компании"></div>
+										<div class="loc_icon"><img src="img/svg/loc.svg" alt="компании"></div>
 									</div>
 								</div>
 								<div class="col-xl-9 col-lg-8 col-md-6 col-12">
@@ -738,13 +738,13 @@
 										</div>
 										<div class="phones">
 											<h5>Отдел продаж:</h5>
-											<p><span>+38 (098) 123 65 98</span>   <span class="separ">/</span>   <span>+38 (098) 123 65 98</span> </p>
+											<p><span><a href="tel: +38 (098) 123 65 98">+38 (098) 123 65 98</a></span>   <span class="separ">/</span>   <span><a href="tel: +38 (098) 123 65 98">+38 (098) 123 65 98</a></span> </p>
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-2 col-lg-3 col-md-4 col-12">
 									<div class="button_wrap">
-										<a href="#" class="orange_button">Заказать звонок</a>
+										<a href="#small-dialog" class="orange_button popup-with-move-anim">Заказать звонок</a>
 									</div>	
 								</div>
 
@@ -782,7 +782,35 @@
 	
 	
 
+		<!-- POPUP FORMS -->
 	
+		<div id="small-dialog" class="zoom-anim-dialog mfp-hide pop_call">
+
+			<form class="form_call">
+	
+				<h2>Заказать звонок</h2>
+	
+				<div class="input-container">
+					<label>
+						<input type="text" name="name" required/>
+						<div class="label-text">Ваше имя</div>
+					</label>
+				</div>
+	
+				<div class="input-container">
+					<label>
+						<input type="tel" name="phone" required/>
+						<div class="label-text">Номер телефона</div>
+					</label>
+				</div>
+	
+				<button type="submit" class="orange_button">Заказать</button>
+	
+			</form>
+	
+		</div>
+
+
 	
 
 
