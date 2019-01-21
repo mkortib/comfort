@@ -153,9 +153,9 @@
 													<div class="bot_info">
 														<div class="hide_d d-block d-xl-none">Отдел продаж:</div>	
 														<div class="phones">
-															<p>+38 (050) 366 33 33</p>
+															<a href="tel:0503663333">+38 (050) 366 33 33</a>
 															<span>  /  </span>
-															<p>+38 (073) 366 33 33</p>
+															<a href="tel:0733663333">+38 (073) 366 33 33</a>
 														</div>
 													</div>
 												</div>
@@ -195,7 +195,11 @@
 
 								</div>
 
-							</div>		
+							</div>
+
+							<!-- MAP INIT -->
+
+							<div class="map_bl"><div id="map"></div></div>
 
 						</div>
 
@@ -235,6 +239,13 @@
 									      	<input type="tel" name="phone" placeholder="Ваш телефон" required>
 									      	<input type="submit" class="orange_button" value="Отправить">
 												</form>
+
+												<div class="succes_bl">
+
+													<h3>Спасибо за заявку!</h3>
+													<h4>Наш менеджер свяжется с вамм в ближайшее время</h4>
+
+												</div>
 
 											</div>
 
@@ -353,6 +364,23 @@
       </div>
 
    </div>
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 49.994982, lng: 36.217765};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoQeEZv3tflPFly8YMyUYXXZwWFV82Vss&callback=initMap">
+    </script>
 
 	
 	

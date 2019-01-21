@@ -44,13 +44,13 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/jQuery.mmenu/dist/jquery.mmenu.all.js',
-		'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
-		'app/libs/selectize/dist/js/standalone/selectize.min.js',
 		'app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
 		'app/libs/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
 		'app/libs/plugins-scroll/plugins-scroll.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+		'app/libs/fancybox/jquery.fancybox.min.js',
+		'app/libs/aos/aos.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

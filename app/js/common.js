@@ -12,10 +12,45 @@ $(function() {
 			}
 		});
 
-	//
-	// var api = $("#my-menu").data( "mmenu" );
 
-	 $('select').selectize();
+
+  // AOS animation 
+
+  if ($(window).width() > 768) {
+
+      // main page
+
+    $('.ishome .circle').attr('data-aos', 'zoom-in').attr('data-aos-duration', '1000').attr('data-aos-delay', '500');
+    $('.ishome .dec_fig2').attr('data-aos', 'zoom-in').attr('data-aos-duration', '1000').attr('data-aos-delay', '800');
+    $('.ishome .dec_fig').attr('data-aos', 'zoom-in').attr('data-aos-duration', '1000').attr('data-aos-delay', '1000');
+
+      // about page
+
+    $('.prog_title .title_wrap').attr('data-aos', 'fade-right').attr('data-aos-duration', '1500');
+    $('.prog_title .img_wrap').attr('data-aos', 'flip-right').attr('data-aos-delay', '200').attr('data-aos-duration', '1000');
+    $('.circles_wrap .wrap_for_circles .circle_around:nth-child(3)').attr('data-aos', 'zoom-in').attr('data-aos-delay', '600').attr('data-aos-duration', '1000');
+    $('.circles_wrap .wrap_for_circles .circle_around:nth-child(2)').attr('data-aos', 'zoom-in').attr('data-aos-delay', '900').attr('data-aos-duration', '1000');
+    $('.circles_wrap .wrap_for_circles .circle_around:nth-child(1)').attr('data-aos', 'zoom-in').attr('data-aos-delay', '1100').attr('data-aos-duration', '1000');
+    $('.prog_title .img_wrap_all .circle_alone').attr('data-aos', 'zoom-in').attr('data-aos-delay', '1000').attr('data-aos-duration', '1000');
+    $('.img_container:nth-child(1)').attr('data-aos', 'zoom-in').attr('data-aos-duration', '1000');
+    $('.circles_descr .it1').attr('data-aos', 'fade-up').attr('data-aos-duration', '1000');
+    $('.circles_descr .it2').attr('data-aos', 'fade-down').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+    $('.circles_descr .it3').attr('data-aos', 'fade-up').attr('data-aos-delay', '200').attr('data-aos-duration', '1000');
+    $('.circles_descr .it4').attr('data-aos', 'fade-down').attr('data-aos-delay', '300').attr('data-aos-duration', '1000');
+    $('.circles_descr .it5').attr('data-aos', 'fade-up').attr('data-aos-delay', '400').attr('data-aos-duration', '1000');
+    $('.slider_accomp ').attr('data-aos', 'zoom-in').attr('data-aos-duration', '1000');
+    $('.flat_examples_wrap .flat_simple').attr('data-aos', 'flip-left').attr('data-aos-duration', '1000');
+    $('.flat_examples_wrap .flat_all').attr('data-aos', 'flip-right').attr('data-aos-duration', '1000');
+
+    // mainplanirovki page
+
+    $('.plan_title').attr('data-aos', 'fade-down').attr('data-aos-duration', '1500');
+    $('.after_title').attr('data-aos', 'fade-up').attr('data-aos-delay', '200').attr('data-aos-duration', '1600');
+  
+  }
+
+
+
 
 
   var $windWidth = $(window).width();
@@ -197,16 +232,16 @@ $(function() {
     var i = (currentSlide ? currentSlide : 0) + 1;
     if (i == 1) {
       $('.hod_stroyki_wrap .owl_nav .slide_prev').css('border-color', '#d6d8d9');
-      $('.hod_stroyki_wrap .owl_nav .slide_prev').attr('src', 'img/arr_grey_l.png');
+      $('.hod_stroyki_wrap .owl_nav .slide_prev > img').attr('src', 'img/hr_arr_l.svg');
     } else {
-      $('.hod_stroyki_wrap .owl_nav .slide_prev > img').attr('src', 'img/about_project/left_arr.png');
+      $('.hod_stroyki_wrap .owl_nav .slide_prev > img').attr('src', 'img/orr_arr_left.svg');
       $('.hod_stroyki_wrap .owl_nav .slide_prev').css('border-color', '#f97b2d');
     }
     if (i == slick.slideCount) {
-      $('.hod_stroyki_wrap .owl_nav .slide_next > img').attr('src', 'img/arr_grey_r.png');
+      $('.hod_stroyki_wrap .owl_nav .slide_next > img').attr('src', 'img/hr_arr_r.svg');
       $('.hod_stroyki_wrap .owl_nav .slide_next').css('border-color', '#d6d8d9');
     } else {
-      $('.hod_stroyki_wrap .owl_nav .slide_next > img').attr('src', 'img/about_project/arro_orange.png');
+      $('.hod_stroyki_wrap .owl_nav .slide_next > img').attr('src', 'img/orr_arr_right.svg');
       $('.hod_stroyki_wrap .owl_nav .slide_next').css('border-color', '#f97b2d');
     }
   });
@@ -543,9 +578,14 @@ $(function() {
 
   $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
+
+
 });
 
 $(window).on('load', function() {
 		$('.loader-wrap').fadeOut();
+    AOS.init({
+      once: true
+    });
 });
 

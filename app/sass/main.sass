@@ -342,6 +342,14 @@ body
 		padding: 0 15px
 		color: #fff
 		z-index: 5
+
+.isnohome
+	.header_nav
+		li
+			&:hover
+				a
+					color: rgba(#fff, .6) 
+
 .header_nav
 	.nav_cnt
 		display: flex
@@ -358,6 +366,13 @@ body
 		a
 			color: #fff
 			text-decoration: none
+			transition: color .3s ease
+		&.active_l
+			a
+				color: rgba(#fff, .6)
+		// &:hover
+		// 	a
+		// 		color: rgba(#fff, .6) 
 	.mnu_toggle
 		outline: none
 		display: flex
@@ -406,7 +421,15 @@ body
 			margin: 5px 0 0 0
 			
 		
-		
+.isnohome
+	.header_nav 
+		.drop_down
+			min-width: 300px
+		.drop
+			&:hover
+				.drop_down
+					display: flex
+					justify-content: space-between
 
 
 .phone_warp
@@ -1186,10 +1209,19 @@ section
 			background-size: cover
 			background-position: center
 			background-repeat: no-repeat
+			position: relative
 		p
 			margin: 40px 0
 			@include montMd()
 			font-size: 16px
+		a
+			position: absolute
+			width: 100%
+			height: 100%
+			bottom: 0
+			left: 0
+			right: 0
+			top: 0
 
 
 
@@ -1351,6 +1383,9 @@ section
 		margin: 0
 	.wsf
 		text-align: right
+		font-size: 12px
+		text-decoration: none
+		color: rgba(#fff, .4)
 
 
 .comunicate
@@ -1828,6 +1863,7 @@ section
 	margin-bottom: 10px
 
 .button_all
+	position: relative
 	display: flex
 	li
 		max-width: 130px
@@ -1841,11 +1877,18 @@ section
 			position: relative
 			a:first-child
 				margin-right: 25px
-		&:hover
 			.but_white
-				color: $lightOrange
+				&:hover
+					color: $lightOrange
+					border-color: $lightOrange
+		&.act_but
+			.but_white
+				color: #fff
+				@include grad-bg()
 				border: 2px solid $lightOrange
+
 	.but_white
+		border: 2px solid #fff
 		@include montMd()
 		color: $silver
 		font-size: 14px
@@ -1858,7 +1901,10 @@ section
 		text-align: center
 		padding: 15px 5px
 		border-radius: 40px
-		border: 1px solid transparent
+		border: 2px solid transparent
+		&:hover
+			color: $lightOrange
+			border-color: $lightOrange
 
 
 
@@ -2629,18 +2675,32 @@ section
 .map_block_wrap
 	margin-top: 80px
 	position: relative
-	&::after
-		content: ''
+	// &::after
+	// 	content: ''
+	// 	right: 0
+	// 	top: 0
+	// 	position: absolute
+	// 	width: 100%
+	// 	max-width: 1550px
+	// 	height: 750px
+	// 	background-image: url('../img/contacts/map_big.png')
+	// 	background-size: cover
+	// 	background-position: center
+	// 	z-index: -1
+	.map_bl
+		position: absolute
 		right: 0
 		top: 0
-		position: absolute
 		width: 100%
+		height: 750px
 		max-width: 1550px
 		height: 750px
-		background-image: url('../img/contacts/map_big.png')
-		background-size: cover
-		background-position: center
-		z-index: -1
+		z-index: 1
+		#map
+			width: 100%
+			height: 750px
+			max-width: 1550px
+			height: 750px
 
 .map_block
 	position: relative
@@ -2658,6 +2718,8 @@ section
 
 
 .contacts_info
+	position: relative
+	z-index: 2
 	@include orangeShad()
 	display: flex
 	@include grad-bg()
@@ -2690,6 +2752,8 @@ section
 			background: $blue
 
 .all_schedule
+	position: relative
+	z-index: 2
 	margin-top: 20px
 	padding: 45px 30px
 	border-radius: 10px
@@ -2715,7 +2779,9 @@ section
 		justify-content: center
 		align-items: center
 		margin-left: 25px
-		p
+		a
+			white-space: nowrap
+			text-decoration: none
 			margin: 0
 			@include montMd()
 			font-size: 16px
@@ -2741,11 +2807,13 @@ section
 		display: flex
 	.schedule
 		display: flex
-		p
+		p, a
 			margin: 0
 			color: $silver
 			font-size: 16px
 			@include montMd()
+		a
+			text-decoration: none
 		.bold
 			line-height: 24px
 			margin-bottom: 10px
@@ -2769,11 +2837,30 @@ section
 
 .cont_but
 	margin-top: 30px
+	position: relative
+	z-index: 2
 
 .contact_form_wrap
 	margin-top: 20%
 	position: relative
 	margin-bottom: 8%
+
+	.succes_bl
+		display: none
+		text-align: center
+		max-width: 600px
+		width: 100%
+		margin: 40px auto
+		position: relative
+		@include grad-bg()
+		@include montBold()
+		padding: 50px 0
+		border-radius: 20px
+		@include orangeShad()
+		color: #fff
+
+		h3
+			font-size: 24px
 
 
 
@@ -3578,6 +3665,7 @@ section
 			letter-spacing: 1px
 			text-decoration: none
 			img
+				width: 13px
 				position: relative
 				bottom: 2px
 				margin-left: 10px
@@ -3663,8 +3751,8 @@ section
 		text-transform: uppercase
 		text-decoration: none
 		img
-			width: 14px
-			height: 9px
+			width: 13px
+			height: 13px
 			position: relative
 			top: 5px 
 
@@ -4233,8 +4321,44 @@ section
 
 
 
+/** FANCYBOX BUTTONS **/ 
 
+/***** FANCYBOX ******/
 
+.fancybox-button--left_new
+	background: #1e2021
+	top: 40%
+	left: 5%
+	width: 80px
+	height: 130px
+	position: absolute
+	z-index: 99999
+	font-size: 36px
+	outline: none
+	transition: all .3s ease
+
+.fancybox-container
+	button:focus
+		outline: none
+
+.fancybox-button--right_new
+	transition: all .3s ease
+	background: #1e2021
+	top: 40%
+	right: 5%
+	width: 80px
+	height: 130px
+	position: absolute
+	z-index: 99999
+	font-size: 36px
+	outline: none
+
+.fancybox-button--left_new:hover, .fancybox-button--right_new:hover
+	color: $accent
+	background: #1e2021
+
+.fancybox-controls--canzoomIn .fancybox-placeholder
+	margin: auto
 
 
 /* FORM CALL */
@@ -4285,6 +4409,7 @@ section
 			font-weight: 500
 			
 			.label-text
+				display: block
 				color: $silver
 				cursor: text
 				@include montMd()
@@ -4327,6 +4452,26 @@ section
 
 
 /* POPUP */
+
+.succes_pop
+	color: $orange
+	@include montMd()
+	text-align: center
+	display: none
+
+	h3
+		font-size: 35px
+		letter-spacing: 2px
+		text-shadow: -2px 2px 2px rgba($lightOrange, .4), -4px 4px rgba(0, 0, 0, .1)
+		transform: rotate(-5deg)
+	
+	h4
+		font-size: 24px
+		line-height: 1.5
+		margin-top: 40px
+		transform: rotate(-10deg)
+
+
 
 .pop_call 
 	background: white
@@ -4532,6 +4677,7 @@ section
 
 /*** CUSTOM MMENU ****/
 
+
 .mm-navbar 
 	position: relative
 	height: auto
@@ -4545,6 +4691,20 @@ section
 
 .mm-listitem:after
 	display: none
+
+.mm-btn_next:after
+	right: 32px
+
+.mm-listitem .mm-btn_next:not(.mm-btn_fullwidth)
+	width: 56px
+
+.mm-listitem .mm-btn_next:before
+	height: 20px
+	top: 10px
+
+.mm-menu_theme-black .mm-navbar a, .mm-menu_theme-black .mm-navbar>*
+	top: -10px
+
 
 html.mm-wrapper_opened
 	overflow-y: scroll
@@ -4574,6 +4734,8 @@ html.mm-wrapper_opened
 			&>a, .fas
 				color: $lightOrange
 
+.mm-panels>.mm-panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview.mob_padd
+	margin-top: 20px
 
 /******** END ******/ 
 
